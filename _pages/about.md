@@ -30,7 +30,7 @@ Publication
 Projects
 ------
 
-- Contributor of **Iterative Editing Mode** in [MIGC: Multi-Instance Generation Controller for Text-to-Image Synthesis](https://github.com/limuloo/MIGC).  ![GitHub stars](https://img.shields.io/github/stars/limuloo/MIGC?style=social)
+- Author of **Iterative Editing Mode** in [MIGC: Multi-Instance Generation Controller for Text-to-Image Synthesis](https://github.com/limuloo/MIGC).  ![GitHub stars](https://img.shields.io/github/stars/limuloo/MIGC?style=social)
 
 
 ![alt text](migc.gif)
