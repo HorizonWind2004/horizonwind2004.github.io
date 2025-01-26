@@ -22,11 +22,19 @@ Publication
 
 (*: Equal Contribution)
 
-- **3DIS: Depth-Driven Decoupled Instance Synthesis for Text-to-Image Generation**
+- **[ICLR 2025] 3DIS: Depth-Driven Decoupled Instance Synthesis for Text-to-Image Generation**
 
-  - Dewei Zhou\*, **<u>Ji Xie</u>**\*, Zongxin Yang, Yi Yang.  (In Submission) [[PDF]](https://arxiv.org/abs/2410.12669) 
+  - Dewei Zhou\*, **<u>Ji Xie</u>**\*, Zongxin Yang, Yi Yang. [[PDF]](https://arxiv.org/abs/2410.12669) 
 
 ![alt text](3DIS.png)
+
+
+- **[Technical report] 3DIS-FLUX: Simple and Efficient Multi-instance Generation with DiT Rendering**
+
+  - Dewei Zhou, **<u>Ji Xie</u>**, Zongxin Yang, Yi Yang.  [[PDF]](https://arxiv.org/abs/2410.12669) 
+
+![alt text](3DIS-FLUX.png)
+
 
 Projects
 ------
