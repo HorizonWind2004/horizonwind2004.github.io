@@ -25,7 +25,7 @@ See in my publication list [here](https://horizonwind2004.github.io/publications
 Projects
 ------
 
-I'm an ACGN lover so I'm enthusiastic about the projects which can generate impressive images/videos/music. Here are some of my projects:
+I'm an ACGN lover QAQ so I'm enthusiastic about the projects which can generate impressive images/videos/music. Here are some of my projects:
 
 - Author of **Iterative Editing Mode** in [MIGC: Multi-Instance Generation Controller for Text-to-Image Synthesis](https://github.com/limuloo/MIGC).  ![GitHub stars](https://img.shields.io/github/stars/limuloo/MIGC?style=social)
 
