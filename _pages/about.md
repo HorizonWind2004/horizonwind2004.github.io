@@ -38,25 +38,22 @@ Previously, I've also been a member of the ZJU ACM/ICPC team, and I've reached a
 </style>
 
 ## Publications
+<style>
+.pub-card strong { font-weight: 600; }
+.pub-card u { text-decoration: underline; }
+</style>
 
 <div class="pub-card">
     <span class="pub-badge">ICLR 2025</span>
-    **3DIS: Depth-Driven Decoupled Instance Synthesis for Text-to-Image Generation**  
-    *Dewei Zhou*, **<u>Ji Xie</u>***, Zongxin Yang, Yi Yang  
+    <strong>3DIS: Depth-Driven Decoupled Instance Synthesis for Text-to-Image Generation</strong><br>
+    <em>Dewei Zhou*, <u><strong>Ji Xie</strong></u>*, Zongxin Yang, Yi Yang</em>
     
-    [📄 PDF](https://arxiv.org/abs/2410.12669) | [📝 BibTeX](#)  
+    <div style="margin: 10px 0">
+        <a href="https://arxiv.org/abs/2410.12669" target="_blank">📄 PDF</a> |
+        <a href="#bibtex">📝 BibTeX</a>
+    </div>
     
     <img src="3DIS.png" alt="3DIS Framework" style="max-width: 80%; margin: 1rem auto; display: block;">
-</div>
-
-<div class="pub-card">
-    <span class="pub-badge">Technical Report</span>
-    **3DIS-FLUX: Simple and Efficient Multi-instance Generation with DiT Rendering**  
-    *Dewei Zhou, **<u>Ji Xie</u>**, Zongxin Yang, Yi Yang*  
-    
-    [📄 PDF](https://arxiv.org/abs/2410.12669)  
-    
-    <img src="3DIS-FLUX.png" alt="3DIS-FLUX Results" style="max-width: 80%; margin: 1rem auto; display: block;">
 </div>
 
 Projects
