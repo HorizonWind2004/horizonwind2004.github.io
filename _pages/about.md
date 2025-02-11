@@ -17,44 +17,24 @@ I am fortunate to be advised by Prof. [Yi Yang](https://scholar.google.com.hk/ci
 
 Previously, I've also been a member of the ZJU ACM/ICPC team, and I've reached a rating of **<span style="color:red">2478</span>** on [Codeforces](https://codeforces.com/profile/epyset).
 
-<style>
-.pub-card {
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    transition: box-shadow 0.3s;
-}
-.pub-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.pub-badge {
-    background: #2c3e50;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.9em;
-}
-</style>
+Publication
+------
 
-## Publications
-<style>
-.pub-card strong { font-weight: 600; }
-.pub-card u { text-decoration: underline; }
-</style>
+(*: Equal Contribution)
 
-<div class="pub-card">
-    <span class="pub-badge">ICLR 2025</span>
-    <strong>3DIS: Depth-Driven Decoupled Instance Synthesis for Text-to-Image Generation</strong><br>
-    <em>Dewei Zhou*, <u><strong>Ji Xie</strong></u>*, Zongxin Yang, Yi Yang</em>
-    
-    <div style="margin: 10px 0">
-        <a href="https://arxiv.org/abs/2410.12669" target="_blank">📄 PDF</a> |
-        <a href="#bibtex">📝 BibTeX</a>
-    </div>
-    
-    <img src="3DIS.png" alt="3DIS Framework" style="max-width: 80%; margin: 1rem auto; display: block;">
-</div>
+- **[ICLR 2025] 3DIS: Depth-Driven Decoupled Instance Synthesis for Text-to-Image Generation**
+
+  - Dewei Zhou\*, **<u>Ji Xie</u>**\*, Zongxin Yang, Yi Yang. [[PDF]](https://arxiv.org/abs/2410.12669) 
+
+![alt text](3DIS.png)
+
+
+- **[Technical report] 3DIS-FLUX: Simple and Efficient Multi-instance Generation with DiT Rendering**
+
+  - Dewei Zhou, **<u>Ji Xie</u>**, Zongxin Yang, Yi Yang.  [[PDF]](https://arxiv.org/abs/2410.12669) 
+
+![alt text](3DIS-FLUX.png)
+
 
 Projects
 ------
