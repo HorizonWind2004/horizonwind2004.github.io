@@ -21,7 +21,7 @@ repository               : "HorizonWind2004/horizonwind2004.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "icon.jpg"
   name             : "Ji Xie"
   pronouns         : # example: "she/her"  
   bio              : "HorizonWind2004 / sanaka87"
