@@ -20,24 +20,12 @@ Previously, I've also been a member of the ZJU ACM/ICPC team, and I've reached a
 Publication
 ------
 
-(*: Equal Contribution)
-
-- **[ICLR 2025] 3DIS: Depth-Driven Decoupled Instance Synthesis for Text-to-Image Generation**
-
-  - Dewei Zhou\*, **<u>Ji Xie</u>**\*, Zongxin Yang, Yi Yang. [[PDF]](https://arxiv.org/abs/2410.12669) 
-
-![alt text](3DIS.png)
-
-
-- **[Technical report] 3DIS-FLUX: Simple and Efficient Multi-instance Generation with DiT Rendering**
-
-  - Dewei Zhou, **<u>Ji Xie</u>**, Zongxin Yang, Yi Yang.  [[PDF]](https://arxiv.org/abs/2410.12669) 
-
-![alt text](3DIS-FLUX.png)
-
+See in my publication list [here](https://horizonwind2004.github.io/publications/).
 
 Projects
 ------
+
+I'm an ACGN lover so I'm enthusiastic about the projects which can generate impressive images/videos/music. Here are some of my projects:
 
 - Author of **Iterative Editing Mode** in [MIGC: Multi-Instance Generation Controller for Text-to-Image Synthesis](https://github.com/limuloo/MIGC).  ![GitHub stars](https://img.shields.io/github/stars/limuloo/MIGC?style=social)
 
