@@ -12,7 +12,7 @@ use_math: true
 
 ------------
 
-> 设 $f,g$ 为 $D$ 上的有界函数，证明：
+> 设 \(f,g\) 为 $D$ 上的有界函数，证明：
 
 > $$\inf\{f(x)+g(x)\}\le\inf f(x)+\sup g(x)$$
 
@@ -758,7 +758,7 @@ $$\le 2\lim_{n\to\infty} \left|\frac{1}{n}\right| = 0$$
 
 > $$\max_{x\in[a,b]}|f(x)|\le|\frac 1{b-a}\int_a^bf(x)\mathrm dx|+\int_a^b|f'(x)|\mathrm dx$$
 
-妈妈生的，当时自己做出来了，复习的时候以为这题不可做。
+当时自己做出来了，复习的时候以为这题不可做...
 
 有一个显然的中值定理形式。设：
 
