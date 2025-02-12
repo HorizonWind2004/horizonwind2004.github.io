@@ -100,7 +100,7 @@ $$\sqrt{\frac{2}{2}}\sqrt{1+\sqrt{2+\sqrt{3+...+\sqrt{n}}}}$$
 
 $$\sqrt{2}\sqrt{\frac{1}{2}+\sqrt{\frac{2}{2^{2^1}}+\sqrt{\frac{3}{2^{2^2}}+...+\sqrt{\frac{n}{2^{2^{n-1}}}}}}}$$
 
-显然有 $2^{n-1}\ge n(n\ge1),\therefore 2^{{2^{n-1}-1}}\ge n\ (n\ge1)$
+显然有 $2^{n-1}\ge n(n\ge1),\therefore 2^{2^{n-1}-1}\ge n\ (n\ge1)$
 
 那么原式有上界
 
@@ -225,7 +225,7 @@ $$=\lim\limits_{n\to+\infty}\frac {1-(1-f(x_n))^3}{x_{n+1}^3}=\lim\limits_{n\to+
 
 也就是：
 
-$$\lim_{n\to+\infty}\sqrt[3]\frac {f'''(0)}2n^{\frac 13} x_n = 1$$
+$$\lim_{n\to+\infty}\sqrt[3]{\frac {f'''(0)}2}n^{\frac 13}x_n = 1$$
 
 
 ------------
