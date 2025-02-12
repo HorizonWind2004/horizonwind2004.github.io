@@ -21,6 +21,8 @@ I'm an ACGN lover QAQ so I'm enthusiastic about the Image, Video, Music and Voca
 
 Previously, I've also been a member of the ZJU ACM/ICPC team, and I've reached a rating of **<span style="color:red">2478</span>** on [Codeforces](https://codeforces.com/profile/epyset).
 
+![alt text](https://cfrating.baoshuo.dev/rating?username=Epyset)
+
 Publication
 ------
 
@@ -33,3 +35,8 @@ Projects
 
 
 ![alt text](migc.gif)
+
+Other
+------
+
+You can check my old blog [here](https://www.luogu.com.cn/user/77426). There are some old articles about my competitive programming experience :(.
