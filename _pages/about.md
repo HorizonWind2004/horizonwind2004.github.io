@@ -20,9 +20,8 @@ I am fortunate to be a research intern at Nanyang Technological University (NTU)
 
 My research interests lie in the Computer Vision and Generative Model. Specifically, I'm currently interested in **Controllable Text-to-Image Generation**, **Multi-modal Alignment**.
 
-IMy Ultimate goal is to build a model that can **Make Everybody be his/her Own Artist Easily**. If you have any idea or want to discuss/collaboration, feel free to contact me!
+My Ultimate goal is to build a model that can **Make Everybody be his/her Own Artist Easily**. If you have any idea or want to discuss/collaboration, feel free to contact me!
 
-![alt text](https://cfrating.baoshuo.dev/rating?username=Epyset)
 
 Publication
 ------
@@ -39,6 +38,8 @@ Projects
 Miscellaneous
 ------
 
-'m an ACGN lover QAQ so I'm enthusiastic about the Image, Video, Music and Vocal Generation, especially the **model which have a good controllability**.
+I'm an ACGN lover QAQ so I'm enthusiastic about the Image, Video, Music and Vocal Generation, especially the **model which have a good controllability**.
 
 Previously, I've also been  a member of the ZJU ACM/ICPC team, and I've reached a rating of **<span style="color:red">2478</span>** on [Codeforces](https://codeforces.com/profile/epyset). You can check my old blog [here](https://www.luogu.com.cn/user/77426). There are some old articles about my competitive programming experience :(.
+
+![alt text](https://cfrating.baoshuo.dev/rating?username=Epyset)
