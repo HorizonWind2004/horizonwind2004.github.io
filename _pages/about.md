@@ -20,9 +20,7 @@ I am fortunate to be a research intern at Nanyang Technological University (NTU)
 
 My research interests lie in the Computer Vision and Generative Model. Specifically, I'm currently interested in **Controllable Text-to-Image Generation**, **Multi-modal Alignment**.
 
-I'm an ACGN lover QAQ so I'm enthusiastic about the Image, Video, Music and Vocal Generation, especially the **model which have a good controllability**. My Ultimate goal is to build a model that can **Make Everybody be his/her Own Artist Easily**. If you have any idea or want to discuss/collaboration, feel free to contact me!
-
-Previously, I've also been a member of the ZJU ACM/ICPC team, and I've reached a rating of **<span style="color:red">2478</span>** on [Codeforces](https://codeforces.com/profile/epyset).
+IMy Ultimate goal is to build a model that can **Make Everybody be his/her Own Artist Easily**. If you have any idea or want to discuss/collaboration, feel free to contact me!
 
 ![alt text](https://cfrating.baoshuo.dev/rating?username=Epyset)
 
@@ -36,10 +34,11 @@ Projects
 
 - Author of **Iterative Editing Mode** in [MIGC: Multi-Instance Generation Controller for Text-to-Image Synthesis](https://github.com/limuloo/MIGC).  ![GitHub stars](https://img.shields.io/github/stars/limuloo/MIGC?style=social)
 
-
 ![alt text](migc.gif)
 
-Other
+Miscellaneous
 ------
 
-You can check my old blog [here](https://www.luogu.com.cn/user/77426). There are some old articles about my competitive programming experience :(.
+'m an ACGN lover QAQ so I'm enthusiastic about the Image, Video, Music and Vocal Generation, especially the **model which have a good controllability**.
+
+Previously, I've also been  a member of the ZJU ACM/ICPC team, and I've reached a rating of **<span style="color:red">2478</span>** on [Codeforces](https://codeforces.com/profile/epyset). You can check my old blog [here](https://www.luogu.com.cn/user/77426). There are some old articles about my competitive programming experience :(.
