@@ -13,7 +13,8 @@ About Me
 -----
 I am a junior student at [Zhejiang University](https://www.zju.edu.cn/english/), pursuing a Bachelor of **Computer Science and Technology with an honors degree** from [Chu Kochen Honors College](http://ckc.zju.edu.cn). I expect to receive my degree in June, 2026.
 
-I am fortunate to be a research intern at Berkeley AI Research (BAIR) lab UC Berkeley, advised by [Xudong Wang](https://people.eecs.berkeley.edu/~xdwang/) and Prof. [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/). 
+
+I am fortunate to be a research intern at Nanyang Technological University (NTU) advised by [Prof. Mengmi Zhang](https://a0091624.wixsite.com/deepneurocognition-1/members). And in future I will be a research intern at Berkeley AI Research (BAIR) lab, UC Berkeley, advised by [Xudong Wang](https://people.eecs.berkeley.edu/~xdwang/) and Prof. [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/). 
 
 <!-- I am fortunate to be advised by Prof. [Yi Yang](https://scholar.google.com.hk/citations?user=RMSuNFwAAAAJ&hl=zh-CN) and affiliated with the [ReLER Lab](https://reler.net/), working closely with and [Dr. Zongxin Yang](https://scholar.google.com.hk/citations?user=8IE0CfwAAAAJ&hl=zh-CN), [Dewei Zhou](https://scholar.google.com.hk/citations?user=4C_OwWMAAAAJ&hl=zh-CN&oi=ao).  -->
 
