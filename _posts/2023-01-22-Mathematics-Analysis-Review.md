@@ -7,6 +7,9 @@ tags:
 use_math: true
 
 ---
+
+我要成为数学分析高手！
+
 题源大概是答疑群里同学的野题，课本，真题卷，PICARD Fluid Dynamic 学长（万分感谢 orz）的讲义，以及我自己找到的一些野题。
 
 

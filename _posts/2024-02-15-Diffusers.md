@@ -7,6 +7,8 @@ tags:
 use_math: true
 ---
 
+破碎的梦的开始。
+
 Diffusers 是 Diffusion 模型的代码框架包装，其最大的单位是 pipeline。你只需要一个 pipeline 和权重文件（夹），就可以做到几行代码生成图片。例子如下：
 ```python
 from diffusers import DiffusionPipeline
