@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -79,46 +79,18 @@ redirect_from:
         .link-hover:hover::after {
             width: 100%;
         }
-        
-        /* Override Jekyll's content width restrictions */
-        .page__content {
-            max-width: none !important;
-            width: 100% !important;
-        }
-        
-        .page__content .page__inner-wrap {
-            max-width: none !important;
-        }
-        
-        /* Ensure full width utilization */
-        .container-override {
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            width: 100%;
-            max-width: 1200px;
-        }
-        
-        @media (min-width: 1024px) {
-            .container-override {
-                max-width: 1400px;
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-50">
-    <div class="container-override py-8">
+    <div class="max-w-4xl mx-auto px-4 py-8">
         <!-- Hero Section -->
         <div class="hero-animate mb-12">
-            <div class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-10 shadow-lg">
+            <div class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 shadow-lg">
                 <h1 class="text-4xl font-bold text-gray-800 mb-6">
                     Hi there! 👋 <span class="highlight-text">Welcome to My Digital Space</span>
                 </h1>
                 
-                <div class="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-md">
+                <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
                     <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-graduation-cap text-blue-600 mr-3"></i>
                         About Me
@@ -139,7 +111,7 @@ redirect_from:
 
         <!-- Research Focus Section -->
         <div class="section-animate mb-12">
-            <div class="bg-white rounded-xl p-10 shadow-lg">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                     <i class="fas fa-microscope text-indigo-600 mr-3"></i>
                     Research Focus
@@ -154,7 +126,7 @@ redirect_from:
 
         <!-- Awards Section -->
         <div class="section-animate mb-12">
-            <div class="bg-white rounded-xl p-10 shadow-lg">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                     <i class="fas fa-trophy text-yellow-600 mr-3"></i>
                     Selected Honors and Awards
@@ -223,7 +195,7 @@ redirect_from:
 
         <!-- Publications Section -->
         <div class="section-animate mb-12">
-            <div class="bg-white rounded-xl p-10 shadow-lg">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                     <i class="fas fa-book-open text-green-600 mr-3"></i>
                     Publications
@@ -241,10 +213,10 @@ redirect_from:
 
         <!-- Miscellaneous Section -->
         <div class="section-animate">
-            <div class="bg-white rounded-xl p-10 shadow-lg">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                     <i class="fas fa-star text-orange-600 mr-3"></i>
-Miscellaneous
+                    Miscellaneous
                 </h2>
                 
                 <div class="space-y-6">
