@@ -7,14 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-<!-- <!DOCTYPE html> -->
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -84,32 +79,47 @@ redirect_from:
         .page__content {
             max-width: none !important;
             width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
         
         .page__content .page__inner-wrap {
             max-width: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
         
-        /* Ensure full width utilization */
-        .container-override {
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            width: 100%;
-            max-width: 1200px;
+        /* Override any other Jekyll constraints */
+        .page {
+            max-width: none !important;
+            width: 100% !important;
         }
         
-        @media (min-width: 1024px) {
-            .container-override {
-                max-width: 1400px;
-                padding-left: 2rem;
-                padding-right: 2rem;
+        .masthead__inner-wrap,
+        .page__footer-inner {
+            max-width: none !important;
+        }
+        
+        /* Make sure our custom content takes full width */
+        body .container-override {
+            margin: 0 auto !important;
+            width: 100% !important;
+            max-width: calc(100vw - 300px) !important; /* Account for sidebar */
+            padding: 0 2rem !important;
+        }
+        
+        @media (max-width: 1023px) {
+            body .container-override {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 1rem !important;
             }
         }
+        
     </style>
-</head>
-<body class="bg-gray-50">
+
+<div class="bg-gray-50 min-h-screen">
     <div class="container-override py-8">
         <!-- Hero Section -->
         <div class="hero-animate mb-12">
@@ -273,5 +283,4 @@ Miscellaneous
             </div>
         </div>
     </div>
-</body>
-</html>
+</div>
