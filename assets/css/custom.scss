@@ -1,8 +1,7 @@
 ---
 ---
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+/* Custom styles for personal homepage */
 
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -39,12 +38,20 @@
 }
 
 /* Enhanced Card Styling */
-.hobby-card, .programming-card {
+.hobby-card, .programming-card, .research-interests div {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Research Focus Special Styling */
+.research-interests div {
+  &:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 12px 35px rgba(116, 185, 255, 0.4) !important;
   }
 }
 

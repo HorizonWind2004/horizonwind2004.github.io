@@ -23,12 +23,12 @@ redirect_from:
 
 <div class="research-interests">
   <h2 style="color: #2c3e50; margin-top: 30px;">🔬 Research Focus</h2>
-  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
-    <p style="margin: 0; font-size: 16px; line-height: 1.6;">
-      My research journey centers around <strong>Computer Vision</strong> and <strong>Generative AI</strong>. 
-      I'm particularly excited about building <strong>Unified Multi-modal Models</strong> 
+  <div style="background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); padding: 25px; border-radius: 12px; color: white; margin: 20px 0; box-shadow: 0 8px 25px rgba(116, 185, 255, 0.3);">
+    <p style="margin: 0; font-size: 17px; line-height: 1.7; font-weight: 400;">
+      My research journey centers around <strong style="color: #dff9fb;">Computer Vision</strong> and <strong style="color: #dff9fb;">Generative AI</strong>. 
+      I'm particularly excited about building <strong style="color: #ffeaa7;">Unified Multi-modal Models</strong> 
       that bridge the gap between text and vision. My previous work has focused on 
-      <strong>Controllable Text-to-Image Generation</strong>, including Layout-to-Image synthesis and advanced Image Editing techniques.
+      <strong style="color: #fab1a0;">Controllable Text-to-Image Generation</strong>, including Layout-to-Image synthesis and advanced Image Editing techniques.
     </p>
   </div>
 </div>
