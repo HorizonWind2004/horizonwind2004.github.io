@@ -38,7 +38,7 @@
 }
 
 /* Enhanced Card Styling */
-.hobby-card, .programming-card, .research-interests div {
+.hobby-card, .programming-card, .research-interests div, .award-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
@@ -246,7 +246,7 @@ pre, code {
 }
 
 /* Scroll-triggered animations */
-.hobby-card, .programming-card, .contact-cta {
+.hobby-card, .programming-card, .contact-cta, .award-item {
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -261,6 +261,49 @@ pre, code {
 
 .contact-cta {
   animation-delay: 0.6s;
+}
+
+/* Awards specific animations */
+.award-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.award-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.award-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+/* Special styling for awards section */
+.awards-section {
+  margin: 25px 0;
+  
+  .award-item {
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    &:hover::before {
+      left: 100%;
+    }
+    
+    &:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 /* Loading states */

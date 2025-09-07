@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Ji Xie | AI Researcher & Creative Technologist"
+title                    : "Ji Xie"
 title_separator          : "|"
 name                     : &name "Ji Xie"
-description              : &description "AI Researcher passionate about Generative Models, Computer Vision, and democratizing creativity through technology"
+description              : &description "Computer Vision & Generative Models & Multi-modal"
 url                      : https://horizonwind2004.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "HorizonWind2004/horizonwind2004.github.io"
@@ -24,9 +24,9 @@ author:
   avatar           : "icon.jpg"
   name             : "Ji Xie"
   pronouns         : "he/him"  
-  bio              : "AI Researcher 🤖 | Berkeley BAIR Lab 🐻 | Making creativity accessible through AI ✨"
+  bio              : "Computer Vision & Generative Models & Multi-modal"
   location         : "Hangzhou, China 🇨🇳"
-  employer         : "Zhejiang University & UC Berkeley"
+  employer         : "Zhejiang University"
   uri              : # URL
   email            : "sanaka@berkeley.edu" 
 
@@ -66,13 +66,13 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Username for X / Twitter
+  twitter          : HorizonWind2004
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
   youtube          : # Username
-  zhihu            : # Username
+  zhihu            : sanaka87
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
