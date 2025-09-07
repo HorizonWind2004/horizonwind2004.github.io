@@ -29,7 +29,7 @@ $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
 $global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
+$header-font-family         : "Inter", -apple-system, BlinkMacSystemFont, $sans-serif;
 $caption-font-family        : $serif;
 
 /* type scale */
@@ -62,17 +62,17 @@ $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
 $body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
+$background-color           : #fdfdfd;
+$code-background-color      : #f8f9fa;
 $code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$text-color                 : #2c3e50;
+$border-color               : #e1e8ed;
 
-$primary-color              : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
-$danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+$primary-color              : #3498db;
+$success-color              : #27ae60;
+$warning-color              : #f39c12;
+$danger-color               : #e74c3c;
+$info-color                 : #3498db;
 
 /* brands */
 $behance-color              : #1769FF;
@@ -102,11 +102,11 @@ $xing-color                 : #006567;
 
 
 /* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
+$link-color                 : #3498db;
+$link-color-hover           : #2980b9;
+$link-color-visited         : #9b59b6;
+$masthead-link-color        : #2c3e50;
+$masthead-link-color-hover  : #3498db;
 
 
 /*

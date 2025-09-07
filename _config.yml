@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "sanaka's Homepage"
-title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+title                    : "Ji Xie | AI Researcher & Creative Technologist"
+title_separator          : "|"
+name                     : &name "Ji Xie"
+description              : &description "AI Researcher passionate about Generative Models, Computer Vision, and democratizing creativity through technology"
 url                      : https://horizonwind2004.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "HorizonWind2004/horizonwind2004.github.io"
@@ -23,10 +23,10 @@ author:
   # Biographic information
   avatar           : "icon.jpg"
   name             : "Ji Xie"
-  pronouns         : # example: "she/her"  
-  bio              : "HorizonWind2004 / sanaka87"
-  location         : "Hangzhou, China"
-  employer         : "Zhejiang University"
+  pronouns         : "he/him"  
+  bio              : "AI Researcher 🤖 | Berkeley BAIR Lab 🐻 | Making creativity accessible through AI ✨"
+  location         : "Hangzhou, China 🇨🇳"
+  employer         : "Zhejiang University & UC Berkeley"
   uri              : # URL
   email            : "sanaka@berkeley.edu" 
 
