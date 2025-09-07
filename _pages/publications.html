@@ -1,88 +1,317 @@
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- ==========  STYLE  ========== -->
-<style>
-:root{
-  --c-link:#1565c0;
-  --c-text:#333;
-  --c-muted:#666;
-  --c-spot:#d32f2f;
-  --c-badge:#2c3e50;
-  --c-badge-conf:#5095d6;
-}
-body{font:16px/1.45 "Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--c-text);margin:0;}
-a{color:var(--c-link);text-decoration:none;}
-a:hover{text-decoration:underline;}
-
-.pub-list{list-style:none;margin:32px auto;max-width:960px;padding:0 16px;}
-.pub-item{display:flex;gap:20px;margin-bottom:40px;align-items:flex-start;}
-.pub-thumb{flex:0 0 210px;height:140px;border-radius:4px;object-fit:cover;box-shadow:0 1px 4px rgba(0,0,0,.12);}
-.pub-meta{flex:1;}
-.pub-title{margin:0 0 6px;font-size:1.25em;font-weight:600;line-height:1.3;}
-.pub-authors{margin:0 0 4px;font-size:.95em;color:var(--c-muted);} 
-.pub-authors .me{font-weight:700;text-decoration:underline;}
-.pub-conf{margin:0 0 8px;font-size:.9em;}
-.pub-conf .spot{color:var(--c-spot);font-weight:600;}
-.pub-links{font-size:.9em;}
-.pub-links a + a{margin-left:8px;}
-.pub-link-text{font-size:1.2em; font-weight:500;} /* 新增: 放大链接文本 */
-.github-stars{transform:scale(1); margin:0 5px; vertical-align:middle;} /* 新增: 放大 GitHub stars 徽章 */
-.badge{display:inline-block;background:var(--c-badge);color:#fff;border-radius:4px;padding:0 6px;font-size:.8em;margin-right:6px;vertical-align:middle;}
-.badge-conf{background:var(--c-badge-conf);} 
-.equal-note{font-size:.85em;color:var(--c-muted);max-width:960px;margin:8px auto 24px;padding:0 16px;}
-@media(max-width:600px){
-  .pub-item{flex-direction:column;}
-  .pub-thumb{width:100%;height:180px;}
-}
-</style>
-<p class="equal-note">(*: Equal Contribution)</p>
-
-<!-- ==========  CONTENT  ========== -->
-<ul class="pub-list">
-
-  <!-- Publication: In‑Context Edit -->
-  <li class="pub-item">
-    <img class="pub-thumb" src="https://horizonwind2004.github.io/_pages/ICEdit.jpg" alt="ICEdit thumbnail">
-    <div class="pub-meta">
-      <h3 class="pub-title">In‑Context Edit: Enabling Instructional Image Editing with In‑Context Generation in Large Scale Diffusion Transformer</h3>
-      <p class="pub-authors">Zechuan Zhang, <span class="me">Ji Xie</span>, Yu Lu, Zongxin Yang, Yi Yang</p>
-      <p class="pub-conf"><span class="badge">Technical Report</span></p>
-      <p class="pub-links"><a href="https://arxiv.org/abs/2501.05131" target="_blank"><span class="pub-link-text">📄 Arxiv</span></a> / <a href="https://github.com/River-Zhang/ICEdit" target="_blank"><span class="pub-link-text">💻 Code</span></a> <img class="github-stars" src="https://img.shields.io/github/stars/River-Zhang/ICEdit?style=social" alt="GitHub stars"/> / <a href="https://huggingface.co/sanaka87/ICEdit-MoE-LoRA" target="_blank"><span class="pub-link-text">🤗 Model</span></a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pub-item {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .pub-item:nth-child(1) { animation-delay: 0.1s; }
+        .pub-item:nth-child(2) { animation-delay: 0.3s; }
+        .pub-item:nth-child(3) { animation-delay: 0.5s; }
+        
+        .pub-thumb {
+            transition: all 0.3s ease;
+        }
+        
+        .pub-thumb:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .badge {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .badge::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%);
+            background-size: 200% 200%;
+            animation: shine 2s infinite;
+            opacity: 0.5;
+        }
+        
+        @keyframes shine {
+            0% { background-position: 100% 100%; }
+            100% { background-position: 0 0; }
+        }
+        
+        .spotlight {
+            position: relative;
+        }
+        
+        .spotlight::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            bottom: -2px;
+            left: -2px;
+            border-radius: 9999px;
+            background: linear-gradient(45deg, #ff8a00, #e52e71, #ff8a00);
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .me {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .me::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #4f46e5, #ec4899);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .me:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .link-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .link-icon:hover {
+            transform: translateY(-2px);
+        }
+        
+        .github-stars {
+            transition: all 0.3s ease;
+        }
+        
+        .github-stars:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">Publications</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Research contributions in computer vision and deep learning</p>
+            
+            <div class="mt-6">
+                <a href="https://scholar.google.com" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-graduation-cap mr-2"></i>
+                    Google Scholar Profile
+                </a>
+            </div>
+        </div>
+        
+        <p class="text-sm text-gray-500 mb-8 text-center italic">(*: Equal Contribution)</p>
+        
+        <div class="space-y-10">
+            <!-- Publication 1 -->
+            <div class="pub-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div class="md:flex">
+                    <div class="md:flex-shrink-0 md:w-1/3">
+                        <img class="pub-thumb w-full h-48 md:h-full object-cover" src="https://horizonwind2004.github.io/_pages/ICEdit.jpg" alt="ICEdit thumbnail">
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="badge bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Technical Report</span>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">2025</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">In‑Context Edit: Enabling Instructional Image Editing with In‑Context Generation in Large Scale Diffusion Transformer</h3>
+                        
+                        <p class="text-gray-600 text-sm mb-3">
+                            <span class="font-medium">Zechuan Zhang</span>, 
+                            <span class="me font-bold text-indigo-600">Ji Xie</span>, 
+                            <span class="font-medium">Yu Lu</span>, 
+                            <span class="font-medium">Zongxin Yang</span>, 
+                            <span class="font-medium">Yi Yang</span>
+                        </p>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
+                            A novel approach for instructional image editing using in-context learning with large diffusion transformers, enabling precise edits through natural language instructions.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://arxiv.org/abs/2501.05131" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fas fa-file-pdf mr-1"></i> Paper
+                            </a>
+                            <a href="https://github.com/River-Zhang/ICEdit" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fab fa-github mr-1"></i> Code
+                                <img class="github-stars ml-1 h-4" src="https://img.shields.io/github/stars/River-Zhang/ICEdit?style=social" alt="GitHub stars"/>
+                            </a>
+                            <a href="https://huggingface.co/sanaka87/ICEdit-MoE-LoRA" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fas fa-robot mr-1"></i> Model
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Publication 2 -->
+            <div class="pub-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div class="md:flex">
+                    <div class="md:flex-shrink-0 md:w-1/3">
+                        <img class="pub-thumb w-full h-48 md:h-full object-cover" src="https://horizonwind2004.github.io/_pages/3DIS.png" alt="3DIS thumbnail">
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-2">
+                                <span class="badge bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">ICLR 2025</span>
+                                <span class="spotlight text-xs font-semibold px-2.5 py-0.5 rounded-full bg-gradient-to-r from-yellow-400 to-red-500 text-white">Spotlight</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">2025</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">3DIS: Depth‑Driven Decoupled Instance Synthesis for Text‑to‑Image Generation</h3>
+                        
+                        <p class="text-gray-600 text-sm mb-3">
+                            <span class="font-medium">Dewei Zhou*</span>, 
+                            <span class="me font-bold text-indigo-600">Ji Xie*</span>, 
+                            <span class="font-medium">Zongxin Yang</span>, 
+                            <span class="font-medium">Yi Yang</span>
+                        </p>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
+                            A depth-aware approach for generating multiple distinct instances in text-to-image synthesis, enabling better control over object placement and relationships.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://arxiv.org/abs/2410.12669" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fas fa-file-pdf mr-1"></i> Paper
+                            </a>
+                            <a href="https://github.com/limuloo/3DIS" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fab fa-github mr-1"></i> Code
+                                <img class="github-stars ml-1 h-4" src="https://img.shields.io/github/stars/limuloo/3DIS?style=social" alt="GitHub stars"/>
+                            </a>
+                            <a href="https://huggingface.co/sanaka87/3DIS" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fas fa-robot mr-1"></i> Model
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Publication 3 -->
+            <div class="pub-item bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div class="md:flex">
+                    <div class="md:flex-shrink-0 md:w-1/3">
+                        <img class="pub-thumb w-full h-48 md:h-full object-cover" src="https://horizonwind2004.github.io/_pages/3DIS-FLUX.png" alt="3DIS-FLUX thumbnail">
+                    </div>
+                    <div class="p-6 md:w-2/3">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="badge bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Technical Report</span>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">2025</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">3DIS‑FLUX: Simple and Efficient Multi‑instance Generation with DiT Rendering</h3>
+                        
+                        <p class="text-gray-600 text-sm mb-3">
+                            <span class="font-medium">Dewei Zhou</span>, 
+                            <span class="me font-bold text-indigo-600">Ji Xie</span>, 
+                            <span class="font-medium">Zongxin Yang</span>, 
+                            <span class="font-medium">Yi Yang</span>
+                        </p>
+                        
+                        <p class="text-gray-700 text-sm mb-4">
+                            An extension of 3DIS focusing on efficiency and simplicity for multi-instance generation using Diffusion Transformers (DiT) with improved rendering quality.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://arxiv.org/abs/2501.05131" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fas fa-file-pdf mr-1"></i> Paper
+                            </a>
+                            <a href="https://github.com/limuloo/3DIS" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fab fa-github mr-1"></i> Code
+                                <img class="github-stars ml-1 h-4" src="https://img.shields.io/github/stars/limuloo/3DIS?style=social" alt="GitHub stars"/>
+                            </a>
+                            <a href="https://huggingface.co/sanaka87/3DIS" target="_blank" class="link-icon flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800">
+                                <i class="fas fa-robot mr-1"></i> Model
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </li>
 
-  <!-- Publication: 3DIS -->
-  <li class="pub-item">
-    <img class="pub-thumb" src="https://horizonwind2004.github.io/_pages/3DIS.png" alt="3DIS thumbnail">
-    <div class="pub-meta">
-      <h3 class="pub-title">3DIS: Depth‑Driven Decoupled Instance Synthesis for Text‑to‑Image Generation</h3>
-      <p class="pub-authors">Dewei Zhou* , <span class="me">Ji Xie</span>* , Zongxin Yang, Yi Yang</p>
-      <p class="pub-conf"><span class="badge badge-conf">ICLR 2025</span> <span class="spot">Spotlight</span></p>
-      <p class="pub-links"><a href="https://arxiv.org/abs/2410.12669" target="_blank"><span class="pub-link-text">📄 Arxiv</span></a> / <a href="https://github.com/limuloo/3DIS" target="_blank"><span class="pub-link-text">💻 Code</span></a> <img class="github-stars" src="https://img.shields.io/github/stars/limuloo/3DIS?style=social" alt="GitHub stars"/> / <a href="https://huggingface.co/sanaka87/3DIS" target="_blank"><span class="pub-link-text">🤗 Model</span></a></p>
-    </div>
-  </li>
-
-  <!-- Publication: 3DIS‑FLUX -->
-  <li class="pub-item">
-    <img class="pub-thumb" src="https://horizonwind2004.github.io/_pages/3DIS-FLUX.png" alt="3DIS-FLUX thumbnail">
-    <div class="pub-meta">
-      <h3 class="pub-title">3DIS‑FLUX: Simple and Efficient Multi‑instance Generation with DiT Rendering</h3>
-      <p class="pub-authors">Dewei Zhou, <span class="me">Ji Xie</span>, Zongxin Yang, Yi Yang</p>
-      <p class="pub-conf"><span class="badge">Technical Report</span></p>
-      <p class="pub-links"><a href="https://arxiv.org/abs/2501.05131" target="_blank"><span class="pub-link-text">📄 Arxiv</span></a> / <a href="https://github.com/limuloo/3DIS" target="_blank"><span class="pub-link-text">💻 Code</span></a> <img class="github-stars" src="https://img.shields.io/github/stars/limuloo/3DIS?style=social" alt="GitHub stars"/> / <a href="https://huggingface.co/sanaka87/3DIS" target="_blank"><span class="pub-link-text">🤗 Model</span></a></p>
-    </div>
-  </li>
-
-</ul>
-
+    <script>
+        // Simple intersection observer for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const pubItems = document.querySelectorAll('.pub-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            pubItems.forEach(item => {
+                observer.observe(item);
+            });
+            
+            // Add click effect to publication cards
+            pubItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // Don't trigger if clicking on a link
+                    if (e.target.tagName === 'A' || e.target.parentElement.tagName === 'A') {
+                        return;
+                    }
+                    
+                    // Find the first paper link and open it
+                    const paperLink = item.querySelector('a[href*="arxiv"]');
+                    if (paperLink) {
+                        window.open(paperLink.href, '_blank');
+                    }
+                });
+                
+                // Add hover effect
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
