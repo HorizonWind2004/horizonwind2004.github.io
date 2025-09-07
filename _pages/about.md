@@ -23,26 +23,14 @@ redirect_from:
 
 ## 🔬 Research Focus
 
-My research journey centers around **Computer Vision** and **Generative AI**. I'm particularly excited about building **Unified Multi-modal Models** that bridge the gap between text and vision. My previous work has focused on **Controllable Text-to-Image Generation**, including Layout-to-Image synthesis and advanced Image Editing techniques.
+My research journey centers around **Computer Vision** and **Generative AI**. I'm particularly excited about building **Unified Multi-modal Models** that bridge the gap between text and image. My previous work has focused on **Controllable Text-to-Image Generation**, including Layout-to-Image synthesis and advanced Image Editing techniques.
 
 ## 🎖️ Selected Honors and Awards
 
-<div class="awards-section">
-  <div class="award-item" style="background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%); padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #e17055;">
-    <h4 style="margin: 0 0 8px 0; color: #2d3436; font-weight: 600;">🏆 SenseTime Scholarship</h4>
-    <p style="margin: 0; color: #636e72; font-size: 14px;"><strong>2025</strong> • Top 30 recipients annually in China</p>
-  </div>
-  
-  <div class="award-item" style="background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%); padding: 15px; border-radius: 8px; margin: 15px 0; color: white; border-left: 4px solid #5f3dc4;">
-    <h4 style="margin: 0 0 8px 0; color: #fff; font-weight: 600;">🥇 ICPC Gold Medal</h4>
-    <p style="margin: 0; color: #e0e0e0; font-size: 14px;"><strong>October 2022</strong> • International Collegiate Programming Contest, Shenyang Site</p>
-  </div>
-  
-  <div class="award-item" style="background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%); padding: 15px; border-radius: 8px; margin: 15px 0; color: white; border-left: 4px solid #d63031;">
-    <h4 style="margin: 0 0 8px 0; color: #fff; font-weight: 600;">🥇 CCPC Gold Medal</h4>
-    <p style="margin: 0; color: #e0e0e0; font-size: 14px;"><strong>2022</strong> • China Collegiate Programming Contest, Guangzhou Site</p>
-  </div>
-</div>
+- **SenseTime Scholarship**, 2025 (Top 30 annually in China)
+- **ICPC Gold Medal**, International Collegiate Programming Contest, Shenyang Site, 2022
+- **CCPC Gold Medal**, China Collegiate Programming Contest, Guangzhou Site, 2022
+- **ZJCPC Gold Medal**, Zhejiang Provincial Collegiate Programming Contest, 2023 / 2024
 
 <div class="mission-statement">
   <h2 style="color: #2c3e50;">🎨 My Vision</h2>
@@ -63,6 +51,6 @@ Miscellaneous
 
 I'm an ACGN lover, so I'm enthusiastic about the Image, Video, Music and Vocal Generation, especially the **model which have a good controllability**.
 
-Previously, I've also been  a member of the ZJU ACM/ICPC team, and I've reached a rating of **`<span style="color:red">`2478** on [Codeforces](https://codeforces.com/profile/epyset). You can check my old blog [here](https://www.luogu.com.cn/user/77426). There are some old articles about my competitive programming experience :(.
+Previously, I've also been  a member of the ZJU ACM/ICPC team, and I've reached a rating of `<span style="color:red">`2478 on [Codeforces](https://codeforces.com/profile/epyset). You can check my old blog [here](https://www.luogu.com.cn/user/77426). There are some old articles about my competitive programming experience :(.
 
 ![alt text](https://cfrating.baoshuo.dev/rating?username=Epyset)
