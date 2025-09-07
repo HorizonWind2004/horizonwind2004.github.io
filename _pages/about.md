@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-# Hi there! 👋 Welcome to My Digital Space
+# Hi there! 👋 
 
 <div class="hero-section">
   <div class="intro-text">
@@ -53,6 +53,6 @@ Miscellaneous
 
 I'm an ACGN lover, so I'm enthusiastic about the Image, Video, Music and Vocal Generation, especially the **model which have a good controllability**.
 
-Previously, I've also been  a member of the ZJU ACM/ICPC team, and I've reached a rating of **`<span style="color:red">`2478** on [Codeforces](https://codeforces.com/profile/epyset). You can check my old blog [here](https://www.luogu.com.cn/user/77426). There are some old articles about my competitive programming experience :(.
+Previously, I've also been  a member of the ZJU ACM/ICPC team, and I've reached a rating of **<span style="color:red">2478</span>** on [Codeforces](https://codeforces.com/profile/epyset). You can check my old blog [here](https://www.luogu.com.cn/user/77426). There are some old articles about my competitive programming experience :(.
 
 ![alt text](https://cfrating.baoshuo.dev/rating?username=Epyset)
