@@ -115,7 +115,7 @@ redirect_from:
         <div class="hero-animate mb-12">
             <div class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-10 shadow-lg">
                 <h1 class="text-4xl font-bold text-gray-800 mb-6">
-                    Hi there! 👋</span>
+                    Hi there! 👋
                 </h1>
                 
                 <div class="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-md">
