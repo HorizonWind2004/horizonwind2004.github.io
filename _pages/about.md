@@ -75,6 +75,16 @@ redirect_from:
             width: 100%;
         }
         
+        /* Override Jekyll's grid layout constraints - THIS IS THE KEY! */
+        .page {
+            /* Remove the 10 of 12 span limitation */
+            width: 100% !important;
+            max-width: none !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            float: none !important;
+        }
+        
         /* Override Jekyll's content width restrictions */
         .page__content {
             max-width: none !important;
@@ -90,23 +100,26 @@ redirect_from:
             padding: 0 !important;
         }
         
-        /* Override any other Jekyll constraints */
-        .page {
+        /* Override the #main container restrictions */
+        #main {
             max-width: none !important;
             width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
         }
         
-        .masthead__inner-wrap,
-        .page__footer-inner {
-            max-width: none !important;
-        }
-        
-        /* Make sure our custom content takes full width */
+        /* Make content wider but not too wide */
         body .container-override {
             margin: 0 auto !important;
             width: 100% !important;
-            max-width: calc(100vw - 300px) !important; /* Account for sidebar */
+            max-width: 1000px !important; /* Fixed max width for readability */
             padding: 0 2rem !important;
+        }
+        
+        @media (min-width: 1200px) {
+            body .container-override {
+                max-width: 1200px !important; /* Slightly wider on large screens */
+            }
         }
         
         @media (max-width: 1023px) {
