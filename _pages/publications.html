@@ -7,6 +7,47 @@ author_profile: true
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* Override Jekyll's layout constraints for this page */
+    .page__content {
+        max-width: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .page__content .page__inner-wrap {
+        max-width: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .page {
+        max-width: none !important;
+        width: 100% !important;
+    }
+    
+    .masthead__inner-wrap,
+    .page__footer-inner {
+        max-width: none !important;
+    }
+    
+    body .container-override {
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: calc(100vw - 300px) !important;
+        padding: 0 2rem !important;
+    }
+    
+    @media (max-width: 1023px) {
+        body .container-override {
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 1rem !important;
+        }
+    }
     <style>
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -119,7 +160,8 @@ author_profile: true
         }
     </style>
 
-    <div class="container mx-auto px-4 py-12 max-w-6xl">
+<div class="bg-gray-50 min-h-screen">
+    <div class="container-override py-8">
         <div class="text-center mb-12">
             <h1 class="text-4xl font-bold text-gray-900 mb-2">Publications</h1>
             <p class="text-gray-600 max-w-2xl mx-auto">Research contributions in computer vision and deep learning</p>
@@ -313,3 +355,5 @@ author_profile: true
             });
         });
     </script>
+    </div>
+</div>
