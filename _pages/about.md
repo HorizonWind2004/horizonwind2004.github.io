@@ -7,9 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -75,64 +80,36 @@ redirect_from:
             width: 100%;
         }
         
-        /* Override Jekyll's grid layout constraints - THIS IS THE KEY! */
-        .page {
-            /* Remove the 10 of 12 span limitation */
-            width: 100% !important;
-            max-width: none !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-            float: none !important;
-        }
-        
         /* Override Jekyll's content width restrictions */
         .page__content {
             max-width: none !important;
             width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
         }
         
         .page__content .page__inner-wrap {
             max-width: none !important;
-            width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
         }
         
-        /* Override the #main container restrictions */
-        #main {
-            max-width: none !important;
-            width: 100% !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
+        /* Ensure full width utilization */
+        .container-override {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            width: 100%;
+            max-width: 1200px;
         }
         
-        /* Make content wider but not too wide */
-        body .container-override {
-            margin: 0 auto !important;
-            width: 100% !important;
-            max-width: 1000px !important; /* Fixed max width for readability */
-            padding: 0 2rem !important;
-        }
-        
-        @media (min-width: 1200px) {
-            body .container-override {
-                max-width: 1200px !important; /* Slightly wider on large screens */
+        @media (min-width: 1024px) {
+            .container-override {
+                max-width: 1400px;
+                padding-left: 2rem;
+                padding-right: 2rem;
             }
         }
-        
-        @media (max-width: 1023px) {
-            body .container-override {
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 0 1rem !important;
-            }
-        }
-        
     </style>
-
-<div class="bg-gray-50 min-h-screen">
+</head>
+<body class="bg-gray-50">
     <div class="container-override py-8">
         <!-- Hero Section -->
         <div class="hero-animate mb-12">
@@ -296,4 +273,5 @@ Miscellaneous
             </div>
         </div>
     </div>
-</div>
+</body>
+</html>
