@@ -115,7 +115,7 @@ redirect_from:
         <div class="hero-animate mb-12">
             <div class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-10 shadow-lg">
                 <h1 class="text-4xl font-bold text-gray-800 mb-6">
-                    Hi there! 👋 <span class="highlight-text">Welcome to My Digital Space</span>
+                    Hi there! 👋</span>
                 </h1>
                 
                 <div class="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-md">
@@ -145,9 +145,9 @@ redirect_from:
                     Research Focus
                 </h2>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    My research journey centers around <strong class="text-indigo-600">Computer Vision</strong> and <strong class="text-indigo-600">Generative AI</strong>. 
-                    I'm particularly excited about building <strong class="text-purple-600">Unified Multi-modal Models</strong> that bridge the gap between text and vision. 
-                    My previous work has focused on <strong class="text-pink-600">Controllable Text-to-Image Generation</strong>, including Layout-to-Image synthesis and advanced Image Editing techniques.
+                    My research journey centers around <strong class="text-indigo-600">Computer Vision</strong>, and <strong class="text-indigo-600">Generative Model</strong> and <strong class="text-indigo-600">Multimodal</strong>. 
+                    I'm particularly excited about building <strong class="text-purple-600">Unified Multimodal Models</strong> that bridge the gap between text and vision. 
+                    My previous work has focused on <strong class="text-pink-600">Controllable Text-to-Image Generation</strong>, including Layout-to-Image Generation and Image Editing.
                 </p>
             </div>
         </div>
@@ -177,7 +177,7 @@ redirect_from:
                         </div>
                         <div>
                             <h3 class="font-semibold text-gray-800">ICPC Gold Medal</h3>
-                            <p class="text-gray-600 text-sm">International Collegiate Programming Contest, Shenyang Site</p>
+                            <p class="text-gray-600 text-sm">Shenyang Site</p>
                         </div>
                     </div>
                     
@@ -187,24 +187,14 @@ redirect_from:
                         </div>
                         <div>
                             <h3 class="font-semibold text-gray-800">CCPC Gold Medal</h3>
-                            <p class="text-gray-600 text-sm">China Collegiate Programming Contest, Guangzhou Site</p>
-                        </div>
-                    </div>
-                    
-                    <div class="award-item flex items-start p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg border-l-4 border-blue-500">
-                        <div class="badge bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-4 mt-1">
-                            🥇 2023/24
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">ZJCPC Gold Medal</h3>
-                            <p class="text-gray-600 text-sm">Zhejiang Provincial Collegiate Programming Contest</p>
+                            <p class="text-gray-600 text-sm">Guangzhou Site</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Vision Section -->
+        <!-- Vision Section
         <div class="section-animate mb-12">
             <div class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-xl p-8 shadow-lg">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
@@ -219,7 +209,7 @@ redirect_from:
                     💡 Have an exciting idea or want to explore potential collaborations? I'd love to hear from you!
                 </p>
             </div>
-        </div>
+        </div> -->
 
         <!-- Publications Section -->
         <div class="section-animate mb-12">
