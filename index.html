@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ji Xie — Personal Homepage</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-logo" href="#hero">Ji Xie</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#focus">Research</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#updates">Updates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <div>
+          <p class="hero-kicker">Computer Vision · Generative Models · Multimodal</p>
+          <h1>Hi, I’m Ji Xie.</h1>
+          <p class="hero-subtitle">
+            Senior Computer Science student at Zhejiang University and research intern at Berkeley AI Research.
+            I build controllable vision-language systems that connect perception with generation.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:sanaka@berkeley.edu">Email me</a>
+            <a class="btn btn-secondary" href="#projects">View recent work</a>
+          </div>
+        </div>
+        <div class="hero-note">
+          <span class="note-title">Currently exploring</span>
+          <ul>
+            <li>Instruction-driven diffusion editing</li>
+            <li>Unified multimodal representations</li>
+            <li>Trustworthy perception for creative AI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container split">
+        <div class="section-heading">
+          <h2>About</h2>
+          <p>I enjoy working across research and engineering to make generative AI more reliable, steerable, and useful for people.</p>
+        </div>
+        <div class="section-body">
+          <p>
+            At <strong>Zhejiang University</strong>, I pursue an honors curriculum at the Chu Kochen Honors College. I’m also a research intern with 
+            <a href="https://bair.berkeley.edu/">Berkeley AI Research (BAIR)</a>, advised by Xudong Wang and Professor Trevor Darrell.
+          </p>
+          <p>
+            My work spans controllable text-to-image generation, multimodal reasoning, and building tools that make advanced models easier to adapt.
+            Recently I’ve focused on instruction-following diffusion models and safe editing workflows.
+          </p>
+          <p>
+            Outside the lab, I contribute to open-source resources, mentor younger students, and explore photography as a way to document the world I want AI to understand.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="section section-alt">
+      <div class="container">
+        <div class="section-heading centered">
+          <h2>Research Focus</h2>
+          <p>Questions that keep me curious.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Unified Multimodal Models</h3>
+            <p>Designing architectures that jointly reason over text, vision, and structured signals for grounded decision-making.</p>
+          </article>
+          <article class="card">
+            <h3>Controllable Generation</h3>
+            <p>Pushing layout-aware and instruction-guided diffusion models to craft images that match intent while staying reliable.</p>
+          </article>
+          <article class="card">
+            <h3>Trustworthy Perception</h3>
+            <p>Studying robustness, evaluation, and safety knobs that keep creative AI workflows responsible and inclusive.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Selected Work</h2>
+          <p>Highlights from ongoing research and collaborations.</p>
+        </div>
+        <div class="cards cards-wide">
+          <article class="card">
+            <div class="card-meta">2024 · Research</div>
+            <h3>Instruction-Guided Diffusion Editing</h3>
+            <p>Building a controllable editing stack that aligns diffusion models with free-form instructions and layout hints.</p>
+            <div class="card-links">
+              <a href="mailto:sanaka@berkeley.edu">Contact</a>
+              <a href="https://github.com/HorizonWind2004" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-meta">2023 · Collaboration</div>
+            <h3>Unified Vision-Language Benchmarks</h3>
+            <p>Curated a benchmarking suite for evaluating grounding and reasoning across captioning, VQA, and editing tasks.</p>
+            <div class="card-links">
+              <a href="https://scholar.google.com.hk/citations?user=Wv7ItTYAAAAJ" target="_blank" rel="noopener">Overview</a>
+              <a href="mailto:sanaka@berkeley.edu">Request access</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="updates" class="section section-alt">
+      <div class="container">
+        <div class="section-heading centered">
+          <h2>Recent Updates</h2>
+          <p>Snapshots of what I’ve been up to.</p>
+        </div>
+        <ul class="timeline">
+          <li>
+            <span class="timeline-date">Jan 2024</span>
+            <div class="timeline-body">
+              <h3>Joined Berkeley AI Research</h3>
+              <p>Started an internship with the BAIR lab to explore multimodal instruction-following models.</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">Jun 2023</span>
+            <div class="timeline-body">
+              <h3>Presented on controllable generation</h3>
+              <p>Shared work on layout-aware diffusion editing at a university seminar.</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">Dec 2022</span>
+            <div class="timeline-body">
+              <h3>Launched open-source resources</h3>
+              <p>Published a public repo of prompts and evaluation scripts for diffusion-based editing pipelines.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-heading centered">
+          <h2>Let’s collaborate</h2>
+          <p>Always happy to connect about vision, generative AI, and new creative tools.</p>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:sanaka@berkeley.edu">
+            <span>Email</span>
+            <strong>sanaka@berkeley.edu</strong>
+          </a>
+          <a class="contact-card" href="https://github.com/HorizonWind2004" target="_blank" rel="noopener">
+            <span>GitHub</span>
+            <strong>@HorizonWind2004</strong>
+          </a>
+          <a class="contact-card" href="https://scholar.google.com.hk/citations?user=Wv7ItTYAAAAJ" target="_blank" rel="noopener">
+            <span>Google Scholar</span>
+            <strong>Research profile</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ji Xie. Built with curiosity and care.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      links?.classList.toggle('is-open');
+      toggle?.classList.toggle('is-open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
