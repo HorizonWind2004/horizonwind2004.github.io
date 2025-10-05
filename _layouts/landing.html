@@ -1,0 +1,232 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% assign hero = page.hero %}
+{% assign introduction = page.introduction %}
+{% assign research = page.research_focus %}
+{% assign featured_work = page.featured_work %}
+{% assign updates = page.updates %}
+{% assign quick_links = page.quick_links %}
+{% assign connect = page.connect %}
+
+<div id="main" role="main">
+  <article class="landing" itemscope itemtype="http://schema.org/Person">
+    {% if page.title %}<meta itemprop="name" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+    <section class="landing__content" itemprop="description">
+      {% if hero %}
+        <header class="landing__hero">
+          <div class="landing__hero-body">
+            {% if hero.kicker %}
+              <p class="landing__hero-kicker">{{ hero.kicker }}</p>
+            {% endif %}
+            <h1 class="landing__hero-title">{{ hero.heading | default: page.title }}</h1>
+            {% if hero.subheading %}
+              <p class="landing__hero-subheading">{{ hero.subheading }}</p>
+            {% endif %}
+            {% if hero.highlights %}
+              <dl class="landing__hero-highlights">
+                {% for item in hero.highlights %}
+                  <div class="landing__hero-highlight">
+                    <dt>{{ item.label }}</dt>
+                    <dd>{{ item.value }}</dd>
+                  </div>
+                {% endfor %}
+              </dl>
+            {% endif %}
+            {% if hero.primary_cta or hero.secondary_cta %}
+              <div class="landing__hero-ctas">
+                {% if hero.primary_cta %}
+                  {% assign primary_href = hero.primary_cta.url | default: '' %}
+                  {% assign primary_external = primary_href contains '://' or primary_href contains 'mailto:' %}
+                  <a class="btn btn--primary" href="{% if primary_external %}{{ primary_href }}{% else %}{{ primary_href | relative_url }}{% endif %}"{% if hero.primary_cta.new_tab %} target="_blank" rel="noopener"{% endif %}>{{ hero.primary_cta.label }}</a>
+                {% endif %}
+                {% if hero.secondary_cta %}
+                  {% assign secondary_href = hero.secondary_cta.url | default: '' %}
+                  {% assign secondary_external = secondary_href contains '://' or secondary_href contains 'mailto:' %}
+                  <a class="btn btn--outline" href="{% if secondary_external %}{{ secondary_href }}{% else %}{{ secondary_href | relative_url }}{% endif %}"{% if hero.secondary_cta.new_tab %} target="_blank" rel="noopener"{% endif %}>{{ hero.secondary_cta.label }}</a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+          {% if hero.avatar %}
+            {% assign avatar_src = hero.avatar | default: '' %}
+            {% assign avatar_external = avatar_src contains '://' %}
+            <div class="landing__hero-avatar">
+              <img src="{% if avatar_external %}{{ avatar_src }}{% else %}{{ avatar_src | relative_url }}{% endif %}" alt="{{ page.title }} portrait">
+            </div>
+          {% endif %}
+        </header>
+      {% endif %}
+
+      {% if introduction %}
+        <section class="landing__section landing__section--intro">
+          {% for paragraph in introduction %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+        </section>
+      {% endif %}
+
+      {% if research %}
+        <section class="landing__section">
+          {% if research.heading %}
+            <h2 class="landing__section-title">{{ research.heading }}</h2>
+          {% endif %}
+          {% if research.items %}
+            <div class="landing__cards">
+              {% for item in research.items %}
+                <article class="landing__card">
+                  <h3>{{ item.title }}</h3>
+                  {% if item.description %}
+                    <p>{{ item.description }}</p>
+                  {% endif %}
+                  {% if item.tags %}
+                    <ul class="landing__tags">
+                      {% for tag in item.tags %}
+                        <li>{{ tag }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </article>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </section>
+      {% endif %}
+
+      {% if featured_work %}
+        <section class="landing__section">
+          {% if featured_work.heading %}
+            <h2 class="landing__section-title">{{ featured_work.heading }}</h2>
+          {% endif %}
+          {% if featured_work.description %}
+            <p class="landing__section-lede">{{ featured_work.description }}</p>
+          {% endif %}
+          {% if featured_work.items %}
+            <div class="landing__cards landing__cards--list">
+              {% for item in featured_work.items %}
+                {% assign publication = nil %}
+                {% if item.slug %}
+                  {% assign publication = site.publications | where: "slug", item.slug | first %}
+                {% endif %}
+                <article class="landing__card landing__card--row">
+                  {% if publication %}
+                    {% assign display_title = item.title | default: publication.title %}
+                    {% assign meta_text = item.meta %}
+                    {% if meta_text == nil %}
+                      {% capture generated_meta %}
+                        {% if publication.venue %}{{ publication.venue }}{% endif %}
+                        {% if publication.date %}
+                          {% if publication.venue %} · {% endif %}
+                          {{ publication.date | date: "%Y" }}
+                        {% endif %}
+                      {% endcapture %}
+                      {% assign meta_text = generated_meta | strip %}
+                    {% endif %}
+                    {% assign primary_url = item.url | default: publication.url | default: '' %}
+                    {% assign description_text = item.description | default: publication.excerpt %}
+                    {% assign is_primary_external = primary_url contains '://' or primary_url contains 'mailto:' %}
+                    <h3>
+                      <a href="{% if is_primary_external %}{{ primary_url }}{% else %}{{ primary_url | relative_url }}{% endif %}">{{ display_title }}</a>
+                    </h3>
+                    {% if meta_text != "" %}
+                      <p class="landing__meta">{{ meta_text }}</p>
+                    {% endif %}
+                    {% if description_text %}
+                      <p>{{ description_text }}</p>
+                    {% endif %}
+                    <div class="landing__links">
+                      {% if item.links %}
+                        {% for link in item.links %}
+                          {% assign link_href = link.url | default: '' %}
+                          {% assign link_external = link_href contains '://' or link_href contains 'mailto:' %}
+                          <a class="landing__link" href="{% if link_external %}{{ link_href }}{% else %}{{ link_href | relative_url }}{% endif %}"{% if link.new_tab %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+                        {% endfor %}
+                      {% else %}
+                        {% assign default_href = publication.url | default: '' %}
+                        {% assign default_external = default_href contains '://' or default_href contains 'mailto:' %}
+                        <a class="landing__link" href="{% if default_external %}{{ default_href }}{% else %}{{ default_href | relative_url }}{% endif %}">Read more</a>
+                        {% if publication.paperurl %}
+                          <a class="landing__link" href="{{ publication.paperurl }}" target="_blank" rel="noopener">PDF</a>
+                        {% endif %}
+                      {% endif %}
+                    </div>
+                  {% else %}
+                    {% if item.title %}
+                      <h3>{{ item.title }}</h3>
+                    {% endif %}
+                    {% if item.meta %}<p class="landing__meta">{{ item.meta }}</p>{% endif %}
+                    {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                    {% if item.links %}
+                      <div class="landing__links">
+                        {% for link in item.links %}
+                          {% assign link_href = link.url | default: '' %}
+                          {% assign link_external = link_href contains '://' or link_href contains 'mailto:' %}
+                          <a class="landing__link" href="{% if link_external %}{{ link_href }}{% else %}{{ link_href | relative_url }}{% endif %}"{% if link.new_tab %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                </article>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </section>
+      {% endif %}
+
+      {% if updates and updates.items %}
+        <section class="landing__section">
+          {% if updates.heading %}
+            <h2 class="landing__section-title">{{ updates.heading }}</h2>
+          {% endif %}
+          <ul class="landing__timeline">
+            {% for item in updates.items %}
+              <li>
+                <div class="landing__timeline-date">{{ item.date }}</div>
+                <div class="landing__timeline-body">
+                  <h3>{{ item.title }}</h3>
+                  {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+
+      {% if quick_links and quick_links.items %}
+        <section class="landing__section">
+          {% if quick_links.heading %}
+            <h2 class="landing__section-title">{{ quick_links.heading }}</h2>
+          {% endif %}
+          <div class="landing__quick-links">
+            {% for item in quick_links.items %}
+              {% assign link_href = item.url | default: '' %}
+              {% assign link_external = link_href contains '://' or link_href contains 'mailto:' %}
+              <a class="landing__quick-link" href="{% if link_external %}{{ link_href }}{% else %}{{ link_href | relative_url }}{% endif %}"{% if item.new_tab %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
+      {% if connect and connect.items %}
+        <section class="landing__section landing__section--connect">
+          {% if connect.heading %}
+            <h2 class="landing__section-title">{{ connect.heading }}</h2>
+          {% endif %}
+          {% if connect.description %}
+            <p class="landing__section-lede">{{ connect.description }}</p>
+          {% endif %}
+          <div class="landing__connect-links">
+            {% for item in connect.items %}
+              <a class="landing__connect-link" href="{{ item.url }}"{% if item.new_tab %} target="_blank" rel="noopener"{% endif %}>{{ item.label }}</a>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+    </section>
+  </article>
+</div>
