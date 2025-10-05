@@ -20,6 +20,7 @@
     --chip-text: #4338ca;
     --shadow: 0 22px 40px -28px rgba(15, 23, 42, 0.25);
     --thumb-shadow: 0 24px 42px -32px rgba(59, 130, 246, 0.35);
+    --highlight: #d5393d;
   }
 
   body.theme-dark {
@@ -36,6 +37,7 @@
     --chip-text: #c9e4ff;
     --shadow: 0 30px 48px -32px rgba(0, 0, 0, 0.65);
     --thumb-shadow: 0 30px 52px -36px rgba(45, 151, 173, 0.55);
+    --highlight: #ff6b6b;
   }
 
   * {
@@ -222,6 +224,7 @@
     overflow: hidden;
     box-shadow: var(--thumb-shadow);
     background: linear-gradient(135deg, rgba(67, 56, 202, 0.12), rgba(59, 130, 246, 0.18));
+    border: 3px solid var(--stroke);
   }
 
   .pub-list .thumb img {
@@ -281,6 +284,51 @@
     color: var(--muted);
     background: transparent;
     border-style: dashed;
+  }
+
+  .honor-list {
+    display: grid;
+    gap: clamp(14px, 3vw, 20px);
+  }
+
+  .honor-item {
+    display: flex;
+    gap: clamp(18px, 5vw, 28px);
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--stroke);
+    padding-bottom: clamp(12px, 2.5vw, 16px);
+  }
+
+  .honor-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .honor-main {
+    flex: 1;
+  }
+
+  .honor-title {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .honor-subtitle {
+    color: var(--muted);
+  }
+
+  .honor-meta {
+    text-align: right;
+    font-style: italic;
+    color: var(--muted);
+    min-width: 140px;
+  }
+
+  .award-highlight {
+    color: var(--highlight);
+    font-weight: 700;
   }
 
   footer {
@@ -446,17 +494,56 @@
   </section>
 
   <section>
-    <h2>🧩 Projects</h2>
-    <ul>
-      <li>
-        Author of <strong>Iterative Editing Mode</strong> in
-        <a href="https://github.com/limuloo/MIGC" target="_blank" rel="noopener">
-          <strong>MIGC: Multi-Instance Generation Controller for Text-to-Image Synthesis</strong>
-        </a>
-        <img alt="stars" src="https://img.shields.io/github/stars/limuloo/MIGC?style=social" />
-      </li>
-    </ul>
-    <img src="https://horizonwind2004.github.io/_pages/migc.gif" alt="MIGC demo" />
+    <h2>🏆 Selected Honors</h2>
+    <div class="honor-list">
+      <div class="honor-item">
+        <div class="honor-main">
+          <div class="honor-title">SenseTime Scholarship</div>
+          <div class="honor-subtitle">Top 30 recipients annually in China</div>
+        </div>
+        <div class="honor-meta">06/2025</div>
+      </div>
+
+      <div class="honor-item">
+        <div class="honor-main">
+          <div class="honor-title">International Collegiate Programming Contest (ICPC), Shenyang Site, 2022</div>
+          <div class="honor-subtitle"><span class="award-highlight">Gold Medal</span></div>
+        </div>
+        <div class="honor-meta">Shenyang, 10/2022</div>
+      </div>
+
+      <div class="honor-item">
+        <div class="honor-main">
+          <div class="honor-title">China Collegiate Programming Contest (CCPC), Guangzhou Site, 2022</div>
+          <div class="honor-subtitle"><span class="award-highlight">Gold Medal</span></div>
+        </div>
+        <div class="honor-meta">Guangzhou, 10/2022</div>
+      </div>
+
+      <div class="honor-item">
+        <div class="honor-main">
+          <div class="honor-title">Zhejiang Provincial Collegiate Programming Contest</div>
+          <div class="honor-subtitle"><span class="award-highlight">Gold Medal</span> (2023, 2024)</div>
+        </div>
+        <div class="honor-meta">Hangzhou, 04/2023 · 04/2024</div>
+      </div>
+
+      <div class="honor-item">
+        <div class="honor-main">
+          <div class="honor-title">Zhejiang Provincial Higher Mathematics Competition, 2023</div>
+          <div class="honor-subtitle"><span class="award-highlight">First Prize</span></div>
+        </div>
+        <div class="honor-meta">Hangzhou, 06/2024</div>
+      </div>
+
+      <div class="honor-item">
+        <div class="honor-main">
+          <div class="honor-title">Zhejiang Provincial Undergraduate Physics Innovation (Theoretical) Competition</div>
+          <div class="honor-subtitle"><span class="award-highlight">First Prize</span></div>
+        </div>
+        <div class="honor-meta">Hangzhou, 06/2024</div>
+      </div>
+    </div>
   </section>
 
   <section>
