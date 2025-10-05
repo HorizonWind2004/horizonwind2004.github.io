@@ -1,201 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ji Xie — Personal Homepage</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ji Xie</title>
+<meta name="description" content="Ji Xie — Junior CS Student at Zhejiang University, Research Intern at BAIR (UC Berkeley). Focused on Computer Vision and Generative Models." />
+<style>
+  :root{
+    --bg:#0b0c10;--panel:#10141b;--panel2:#0f131a;--stroke:#1a2333;
+    --text:#e6edf3;--muted:#9fb0c2;--link:#7cc4ff;--chip:#121a26;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--text);font:16px/1.7 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+  a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:940px;margin:32px auto;padding:0 22px}
+  header{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center}
+  .avatar{width:120px;height:120px;border-radius:14px;overflow:hidden;border:1px solid var(--stroke)}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  .title h1{font-size:34px;margin-bottom:4px}
+  .subtitle{color:var(--muted)}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:var(--chip);border:1px solid var(--stroke);border-radius:999px;padding:7px 12px;font-size:14px}
+  section{background:var(--panel);border:1px solid var(--stroke);border-radius:14px;padding:18px 22px;margin-top:26px}
+  section h2{font-size:20px;margin-bottom:8px}
+  p{margin-bottom:10px}
+  ul{padding-left:22px;margin-bottom:6px}
+  .pill{display:inline-block;background:var(--chip);border:1px solid var(--stroke);border-radius:999px;padding:5px 10px;font-size:13px;margin-right:6px}
+  img{max-width:100%;border-radius:8px;margin-top:8px;border:1px solid var(--stroke)}
+  footer{color:var(--muted);text-align:center;margin:30px 0 16px}
+  @media(max-width:700px){header{grid-template-columns:80px 1fr}.avatar{width:80px;height:80px}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="site-nav" aria-label="Primary">
-        <a class="site-logo" href="#hero">Ji Xie</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#focus">Research</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#updates">Updates</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<div class="wrap">
+
+  <header>
+    <div class="avatar">
+      <!-- 替换成你的头像 -->
+      <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="Ji Xie" />
+    </div>
+    <div class="title">
+      <h1>Ji Xie</h1>
+      <div class="subtitle">Junior Student @ Zhejiang University · Research Intern @ BAIR (UC Berkeley)</div>
+      <div class="links">
+        <a class="chip" href="https://github.com/horizonwind2004" target="_blank">GitHub</a>
+        <a class="chip" href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+        <a class="chip" href="https://twitter.com/" target="_blank">Twitter</a>
+        <a class="chip" href="mailto:your_email@zju.edu.cn">your_email@zju.edu.cn</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section id="hero" class="hero">
-      <div class="container hero-content">
-        <div>
-          <p class="hero-kicker">Computer Vision · Generative Models · Multimodal</p>
-          <h1>Hi, I’m Ji Xie.</h1>
-          <p class="hero-subtitle">
-            Senior Computer Science student at Zhejiang University and research intern at Berkeley AI Research.
-            I build controllable vision-language systems that connect perception with generation.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="mailto:sanaka@berkeley.edu">Email me</a>
-            <a class="btn btn-secondary" href="#projects">View recent work</a>
-          </div>
-        </div>
-        <div class="hero-note">
-          <span class="note-title">Currently exploring</span>
-          <ul>
-            <li>Instruction-driven diffusion editing</li>
-            <li>Unified multimodal representations</li>
-            <li>Trustworthy perception for creative AI</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>👋 About Me</h2>
+    <p>I am a junior student at <a href="https://www.zju.edu.cn/english/" target="_blank">Zhejiang University</a>,
+    pursuing a Bachelor of <strong>Computer Science and Technology with Honors</strong> from
+    <a href="http://ckc.zju.edu.cn" target="_blank">Chu Kochen Honors College</a>.
+    I expect to graduate in June 2026.</p>
 
-    <section id="about" class="section">
-      <div class="container split">
-        <div class="section-heading">
-          <h2>About</h2>
-          <p>I enjoy working across research and engineering to make generative AI more reliable, steerable, and useful for people.</p>
-        </div>
-        <div class="section-body">
-          <p>
-            At <strong>Zhejiang University</strong>, I pursue an honors curriculum at the Chu Kochen Honors College. I’m also a research intern with 
-            <a href="https://bair.berkeley.edu/">Berkeley AI Research (BAIR)</a>, advised by Xudong Wang and Professor Trevor Darrell.
-          </p>
-          <p>
-            My work spans controllable text-to-image generation, multimodal reasoning, and building tools that make advanced models easier to adapt.
-            Recently I’ve focused on instruction-following diffusion models and safe editing workflows.
-          </p>
-          <p>
-            Outside the lab, I contribute to open-source resources, mentor younger students, and explore photography as a way to document the world I want AI to understand.
-          </p>
-        </div>
-      </div>
-    </section>
+    <p>Currently, I am a research intern at the Berkeley AI Research (<strong>BAIR</strong>) Lab, UC Berkeley,
+    advised by <a href="https://people.eecs.berkeley.edu/~xdwang/">Xudong Wang</a> and 
+    <a href="https://people.eecs.berkeley.edu/~trevor/">Prof. Trevor Darrell</a>.</p>
 
-    <section id="focus" class="section section-alt">
-      <div class="container">
-        <div class="section-heading centered">
-          <h2>Research Focus</h2>
-          <p>Questions that keep me curious.</p>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <h3>Unified Multimodal Models</h3>
-            <p>Designing architectures that jointly reason over text, vision, and structured signals for grounded decision-making.</p>
-          </article>
-          <article class="card">
-            <h3>Controllable Generation</h3>
-            <p>Pushing layout-aware and instruction-guided diffusion models to craft images that match intent while staying reliable.</p>
-          </article>
-          <article class="card">
-            <h3>Trustworthy Perception</h3>
-            <p>Studying robustness, evaluation, and safety knobs that keep creative AI workflows responsible and inclusive.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <p>My research interests lie in <strong>Computer Vision</strong> and <strong>Generative Models</strong>.
+    Specifically, I'm now exploring <strong>Unified Multi-modal Large Language Models</strong>.
+    Previously I worked heavily on <strong>Controllable Text-to-Image Generation</strong>,
+    including Layout-to-Image Generation and Image Editing.</p>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Selected Work</h2>
-          <p>Highlights from ongoing research and collaborations.</p>
-        </div>
-        <div class="cards cards-wide">
-          <article class="card">
-            <div class="card-meta">2024 · Research</div>
-            <h3>Instruction-Guided Diffusion Editing</h3>
-            <p>Building a controllable editing stack that aligns diffusion models with free-form instructions and layout hints.</p>
-            <div class="card-links">
-              <a href="mailto:sanaka@berkeley.edu">Contact</a>
-              <a href="https://github.com/HorizonWind2004" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-          <article class="card">
-            <div class="card-meta">2023 · Collaboration</div>
-            <h3>Unified Vision-Language Benchmarks</h3>
-            <p>Curated a benchmarking suite for evaluating grounding and reasoning across captioning, VQA, and editing tasks.</p>
-            <div class="card-links">
-              <a href="https://scholar.google.com.hk/citations?user=Wv7ItTYAAAAJ" target="_blank" rel="noopener">Overview</a>
-              <a href="mailto:sanaka@berkeley.edu">Request access</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <p>My ultimate goal is to build a model that can <strong>make everyone their own artist easily</strong>.  
+    If you have ideas or are interested in collaboration, feel free to contact me!</p>
+  </section>
 
-    <section id="updates" class="section section-alt">
-      <div class="container">
-        <div class="section-heading centered">
-          <h2>Recent Updates</h2>
-          <p>Snapshots of what I’ve been up to.</p>
-        </div>
-        <ul class="timeline">
-          <li>
-            <span class="timeline-date">Jan 2024</span>
-            <div class="timeline-body">
-              <h3>Joined Berkeley AI Research</h3>
-              <p>Started an internship with the BAIR lab to explore multimodal instruction-following models.</p>
-            </div>
-          </li>
-          <li>
-            <span class="timeline-date">Jun 2023</span>
-            <div class="timeline-body">
-              <h3>Presented on controllable generation</h3>
-              <p>Shared work on layout-aware diffusion editing at a university seminar.</p>
-            </div>
-          </li>
-          <li>
-            <span class="timeline-date">Dec 2022</span>
-            <div class="timeline-body">
-              <h3>Launched open-source resources</h3>
-              <p>Published a public repo of prompts and evaluation scripts for diffusion-based editing pipelines.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
 
-    <section id="contact" class="section contact">
-      <div class="container">
-        <div class="section-heading centered">
-          <h2>Let’s collaborate</h2>
-          <p>Always happy to connect about vision, generative AI, and new creative tools.</p>
-        </div>
-        <div class="contact-grid">
-          <a class="contact-card" href="mailto:sanaka@berkeley.edu">
-            <span>Email</span>
-            <strong>sanaka@berkeley.edu</strong>
-          </a>
-          <a class="contact-card" href="https://github.com/HorizonWind2004" target="_blank" rel="noopener">
-            <span>GitHub</span>
-            <strong>@HorizonWind2004</strong>
-          </a>
-          <a class="contact-card" href="https://scholar.google.com.hk/citations?user=Wv7ItTYAAAAJ" target="_blank" rel="noopener">
-            <span>Google Scholar</span>
-            <strong>Research profile</strong>
-          </a>
-        </div>
+<div class="pub-list" id="pub-list">
+  <!-- Reconstruction Alignment -->
+  <article class="card" data-year="2025" data-selected="true">
+    <div class="thumb"><img src="https://horizonwind2004.github.io/_pages/reca.png" alt="Reconstruction Alignment thumbnail" style="width:100%;height:100%;object-fit:cover;border-radius:6px" /></div>
+    <div class="meta">
+      <h3>Reconstruction Alignment Improves Unified Multimodal Models</h3>
+      <div class="authors">
+        <b>Ji Xie</b>, Trevor Darrell, Luke Zettlemoyer, XuDong Wang
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Ji Xie. Built with curiosity and care.</p>
+      <div class="venue"><b>Preprint</b> (2025)</div>
+      <div class="actions">
+        <a class="pill" href="https://www.alphaxiv.org/abs/2509.07295" target="_blank" rel="noopener">Paper</a>
+        <a class="pill" href="https://github.com/horizonwind2004/reconstruction-alignment/" target="_blank" rel="noopener">Code</a>
+        <a class="pill" href="https://huggingface.co/collections/sanaka87/reca-68ad2176380355a3dcedc068" target="_blank" rel="noopener">Model</a>
+        <span class="pill tag">Unified MLLM</span>
+      </div>
     </div>
-  </footer>
+  </article>
 
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    toggle?.addEventListener('click', () => {
-      links?.classList.toggle('is-open');
-      toggle?.classList.toggle('is-open');
-    });
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- ICEdit -->
+  <article class="card" data-year="2025" data-selected="true">
+    <div class="thumb"><img src="https://horizonwind2004.github.io/_pages/ICEdit.jpg" alt="ICEdit thumbnail" style="width:100%;height:100%;object-fit:cover;border-radius:6px" /></div>
+    <div class="meta">
+      <h3>In‑Context Edit: Enabling Instructional Image Editing with In‑Context Generation in Large‑Scale Diffusion Transformer</h3>
+      <div class="authors">
+        Zechuan Zhang, <b>Ji Xie</b>, Yu Lu, Zongxin Yang, Yi Yang
+      </div>
+      <div class="venue"><b>NeurIPS 2025</b></div>
+      <div class="actions">
+        <a class="pill" href="https://arxiv.org/abs/2501.05131" target="_blank" rel="noopener">Paper</a>
+        <a class="pill" href="https://github.com/River-Zhang/ICEdit" target="_blank" rel="noopener">Code</a>
+        <a class="pill" href="https://huggingface.co/sanaka87/ICEdit-MoE-LoRA" target="_blank" rel="noopener">Model</a>
+        <span class="pill tag">Image Editing</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3DIS -->
+  <article class="card" data-year="2025" data-selected="true">
+    <div class="thumb"><img src="https://horizonwind2004.github.io/_pages/3DIS-FLUX.png" alt="3DIS thumbnail" style="width:100%;height:100%;object-fit:cover;border-radius:6px" /></div>
+    <div class="meta">
+      <h3>3DIS: Depth‑Driven Decoupled Instance Synthesis for Text‑to‑Image Generation</h3>
+      <div class="authors">
+        Dewei Zhou*, <b>Ji Xie*</b>, Zongxin Yang, Yi Yang
+      </div>
+      <div class="venue"><b>ICLR 2025</b> (Spotlight)</div>
+      <div class="actions">
+        <a class="pill" href="https://arxiv.org/abs/2410.12669" target="_blank" rel="noopener">Paper</a>
+        <a class="pill" href="https://github.com/limuloo/3DIS" target="_blank" rel="noopener">Code</a>
+        <a class="pill" href="https://huggingface.co/sanaka87/3DIS" target="_blank" rel="noopener">Model</a>
+        <span class="pill tag">Controllable T2I</span>
+      </div>
+    </div>
+  </article>
+</div>
+
+
+  <section>
+    <h2>🧩 Projects</h2>
+    <ul>
+      <li>
+        Author of <strong>Iterative Editing Mode</strong> in
+        <a href="https://github.com/limuloo/MIGC" target="_blank">
+          <strong>MIGC: Multi-Instance Generation Controller for Text-to-Image Synthesis</strong>
+        </a>
+        <img alt="stars" src="https://img.shields.io/github/stars/limuloo/MIGC?style=social" />
+      </li>
+    </ul>
+    <img src="migc.gif" alt="MIGC demo" />
+  </section>
+
+  <section>
+    <h2>🎵 Miscellaneous</h2>
+    <p>I'm an ACGN lover (QAQ) so I'm enthusiastic about Image, Video, Music and Vocal Generation —
+    especially models with <strong>strong controllability</strong>.</p>
+    <p>I was a member of the ZJU ACM/ICPC team and achieved a rating of 
+    <strong style="color:#ff6b6b">2478</strong> on 
+    <a href="https://codeforces.com/profile/epyset" target="_blank">Codeforces</a>.  
+    You can find my old blog <a href="https://www.luogu.com.cn/user/77426" target="_blank">here</a> — it contains my competitive-programming notes :)</p>
+    <img src="https://cfrating.baoshuo.dev/rating?username=Epyset" alt="CF rating" />
+  </section>
+
+  <footer>© <span id="y"></span> Yanan Lu · Built with love & HTML 🍓</footer>
+</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
