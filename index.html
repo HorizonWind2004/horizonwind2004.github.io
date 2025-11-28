@@ -6,609 +6,231 @@
 <title>Ji Xie</title>
 <meta name="description" content="Ji Xie — Senior CS Student at Zhejiang University, Research Intern at BAIR (UC Berkeley). Focused on Computer Vision and Generative Models." />
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap');
-
-  :root {
-    color-scheme: light;
-    --bg: #f7f9fc;
-    --panel: #ffffff;
-    --panel-soft: #f1f5f9;
-    --stroke: rgba(15, 23, 42, 0.08);
-    --text: #0f172a;
-    --muted: #52637a;
-    --link: #4338ca;
-    --chip: rgba(67, 56, 202, 0.08);
-    --chip-border: rgba(67, 56, 202, 0.24);
-    --chip-text: #4338ca;
-    --shadow: 0 22px 40px -28px rgba(15, 23, 42, 0.25);
-    --thumb-shadow: 0 24px 42px -32px rgba(59, 130, 246, 0.35);
-    --highlight: #d5393d;
-  }
-
-  body.theme-dark {
-    color-scheme: dark;
-    --bg: #0b0c10;
-    --panel: #10141b;
-    --panel-soft: #0f131a;
-    --stroke: rgba(26, 35, 51, 0.8);
-    --text: #e6edf3;
-    --muted: #9fb0c2;
-    --link: #7cc4ff;
-    --chip: rgba(18, 26, 38, 0.9);
-    --chip-border: rgba(124, 196, 255, 0.35);
-    --chip-text: #c9e4ff;
-    --shadow: 0 30px 48px -32px rgba(0, 0, 0, 0.65);
-    --thumb-shadow: 0 30px 52px -36px rgba(45, 151, 173, 0.55);
-    --highlight: #ff6b6b;
-  }
-
+  /* 基础样式重置 */
   * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
+  /* 全局样式 */
   body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Noto Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-    transition: background 0.35s ease, color 0.35s ease;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
   }
 
-  a {
-    color: var(--link);
+  /* 头部样式 */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  header .info {
+    max-width: 60%;
+  }
+
+  header p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  header img {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  /* 链接样式 */
+  .links {
+    margin: 1.2rem 0;
+  }
+
+  .links a {
+    color: #0066cc;
     text-decoration: none;
-    transition: color 0.2s ease;
+    margin-right: 1rem;
+    font-size: 1rem;
   }
 
-  a:hover {
+  .links a:hover {
     text-decoration: underline;
   }
 
-  .wrap {
-    max-width: 940px;
-    margin: clamp(28px, 6vw, 48px) auto;
-    padding: 0 clamp(18px, 4vw, 32px);
-  }
-
-  .theme-toggle {
-    position: fixed;
-    top: 24px;
-    right: 26px;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid var(--stroke);
-    background: var(--panel);
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: var(--shadow);
-    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-    z-index: 50;
-  }
-
-  .theme-toggle:hover {
-    transform: translateY(-2px);
-  }
-
-  .theme-toggle:focus-visible {
-    outline: 2px solid var(--link);
-    outline-offset: 3px;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: clamp(18px, 5vw, 32px);
-    align-items: center;
-    margin-bottom: clamp(24px, 6vw, 36px);
-  }
-
-  .avatar {
-    width: 140px;
-    aspect-ratio: 1;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid var(--stroke);
-    background: var(--panel-soft);
-    box-shadow: var(--shadow);
-  }
-
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .title h1 {
-    font-size: clamp(2rem, 4vw, 2.6rem);
-    margin-bottom: 6px;
-    font-weight: 700;
-  }
-
-  .subtitle {
-    color: var(--muted);
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 14px;
-  }
-
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 7px 14px;
-    border-radius: 999px;
-    background: var(--chip);
-    border: 1px solid var(--chip-border);
-    color: var(--chip-text);
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .chip:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-    text-decoration: none;
-  }
-
+  /* 部分样式 */
   section {
-    background: var(--panel);
-    border: 1px solid var(--stroke);
-    border-radius: 18px;
-    padding: clamp(20px, 4vw, 28px) clamp(22px, 5vw, 32px);
-    margin-bottom: clamp(22px, 5vw, 32px);
-    box-shadow: var(--shadow);
+    margin-bottom: 2.5rem;
   }
 
   section h2 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    font-weight: 700;
-  }
-
-  section p {
-    margin-bottom: 12px;
-    color: var(--text);
-  }
-
-  section ul {
-    padding-left: 20px;
-    margin-bottom: 12px;
-  }
-
-  section ul li {
-    margin-bottom: 10px;
-    color: var(--text);
-  }
-
-  section img {
-    margin-top: 14px;
-    border-radius: 14px;
-    border: 1px solid var(--stroke);
-    box-shadow: var(--shadow);
-    max-width: 100%;
-    display: block;
-  }
-
-  .pub-section h2 {
-    margin-bottom: 18px;
-  }
-
-  .pub-list {
-    display: grid;
-    gap: clamp(18px, 4vw, 24px);
-  }
-
-  .pub-list .card {
-    display: grid;
-    gap: clamp(18px, 5vw, 24px);
-    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
-    align-items: stretch;
-    background: var(--panel-soft);
-    border-radius: 16px;
-    border: 1px solid var(--stroke);
-    padding: clamp(18px, 4vw, 24px);
-    box-shadow: var(--shadow);
-  }
-
-  .pub-list .thumb {
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: var(--thumb-shadow);
-    background: linear-gradient(135deg, rgba(67, 56, 202, 0.12), rgba(59, 130, 246, 0.18));
-    border: 3px solid var(--stroke);
-  }
-
-  .pub-list .thumb img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: none;
-    margin: 0;
-  }
-
-  .pub-list .meta h3 {
-    margin: 0 0 10px;
-    font-size: 1.2rem;
-    color: var(--text);
-  }
-
-  .pub-list .authors {
-    color: var(--muted);
-    margin-bottom: 10px;
-  }
-
-  .pub-list .venue {
+    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--text);
-    margin-bottom: 12px;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
   }
 
-  .pub-list .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
+  /* 新闻列表样式 */
+  .news-list {
+    list-style-type: none;
   }
 
-  .pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    border-radius: 999px;
-    background: var(--chip);
-    border: 1px solid var(--chip-border);
-    color: var(--chip-text);
-    font-size: 0.85rem;
+  .news-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .news-list li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #666;
+  }
+
+  .news-date {
     font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #555;
+    margin-right: 0.5rem;
   }
 
-  .pill:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow);
-    text-decoration: none;
+  /* 出版物样式 */
+  .publication {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
   }
 
-  .pill.tag {
-    color: var(--muted);
-    background: transparent;
-    border-style: dashed;
-  }
-
-  /* Star badge for projects (e.g., ICEdit) */
-  .pill.star-pill {
-    background: linear-gradient(90deg, #ffd54f, #ffb86b);
-    color: #1b1b1b;
-    border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 6px 18px -10px rgba(255, 165, 0, 0.45);
-  }
-
-  body.theme-dark .pill.star-pill {
-    background: linear-gradient(90deg, #ffcc4d, #ff9f43);
-    color: #0b0b0b;
-    border: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 8px 20px -12px rgba(255, 140, 0, 0.25);
-  }
-
-  .honor-list {
-    display: grid;
-    gap: clamp(14px, 3vw, 20px);
-  }
-
-  .honor-item {
-    display: flex;
-    gap: clamp(18px, 5vw, 28px);
-    justify-content: space-between;
-    align-items: flex-start;
-    border-bottom: 1px solid var(--stroke);
-    padding-bottom: clamp(12px, 2.5vw, 16px);
-  }
-
-  .honor-item:last-child {
+  .publication:last-child {
     border-bottom: none;
-    padding-bottom: 0;
   }
 
-  .honor-main {
-    flex: 1;
-  }
-
-  .honor-title {
+  .publication h3 {
+    font-size: 1.2rem;
     font-weight: 600;
-    color: var(--text);
-    margin-bottom: 4px;
+    margin-bottom: 0.5rem;
+    color: #333;
   }
 
-  .honor-subtitle {
-    color: var(--muted);
-  }
-
-  .honor-meta {
-    text-align: right;
+  .publication .authors {
+    margin-bottom: 0.5rem;
     font-style: italic;
-    color: var(--muted);
-    min-width: 140px;
+    color: #555;
   }
 
-  .award-highlight {
-    color: var(--highlight);
-    font-weight: 700;
+  .publication .venue {
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: #666;
   }
 
-  footer {
-    color: var(--muted);
-    text-align: center;
-    margin: clamp(24px, 6vw, 36px) 0 18px;
-    font-size: 0.9rem;
+  .publication .description {
+    margin-bottom: 0.8rem;
+    color: #444;
+    line-height: 1.6;
   }
 
-  @media (max-width: 820px) {
-    header {
-      grid-template-columns: 110px 1fr;
-    }
-
-    .avatar {
-      width: 110px;
-    }
-
-    .pub-list .card {
-      grid-template-columns: minmax(0, 1fr);
-    }
+  .publication .links {
+    margin-top: 0.5rem;
   }
 
-  @media (max-width: 640px) {
-    .theme-toggle {
-      top: 18px;
-      right: 18px;
-      width: 40px;
-      height: 40px;
-      font-size: 18px;
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    body {
+      padding: 1.5rem;
     }
 
     header {
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      justify-items: center;
     }
 
-    .avatar {
-      width: 120px;
+    header .info {
+      max-width: 100%;
+      margin-top: 1.5rem;
     }
 
-    .title h1 {
-      font-size: 2.2rem;
+    header img {
+      width: 180px;
     }
 
-    .subtitle {
-      font-size: 0.95rem;
-    }
-
-    .links {
-      justify-content: center;
+    header h1 {
+      font-size: 2rem;
     }
   }
 </style>
 </head>
 <body>
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">
-  <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
-</button>
-<div class="wrap">
-
   <header>
-    <div class="avatar">
-      <!-- 替换成你的头像 -->
-      <img src="assets/images/icon.jpg" alt="Ji Xie" />
-    </div>
-    <div class="title">
-      <h1>Ji Xie</h1>
-      <div class="subtitle">Research Intern @ BAIR (UC Berkeley)</div>
+    <div class="info">
+      <h1>Guangzhao (Alex) He</h1>
+      <p>I'm a first-year CS Ph.D. student at Cornell University. I received my Bachelor's degree with honors in Computer Science at Chu Kochen Honors College, Zhejiang University.</p>
+      <p>I've been doing research at the intersection of Computer Vision and Graphics, working closely with Prof. Xiaowei Zhou and Prof. Sida Peng. I also spent a lovely summer at Stanford as a research intern, working with Prof. Jiajun Wu, Prof. Elliott Wu and Chen Geng.</p>
+      <p>I produce music under both aliases AlexHe and Elykz, experimenting among the genres of House, Hip-hop and New-age. My original music has gathered over 2 million streams across platforms.</p>
       <div class="links">
-        <a class="chip" href="https://github.com/horizonwind2004" target="_blank" rel="noopener">GitHub</a>
-        <a class="chip" href="https://scholar.google.com/citations?user=Wv7ItTYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="chip" href="https://x.com/HorizonWind2004" target="_blank" rel="noopener">X (Twitter)</a>
-        <a class="chip" href="mailto:sanaka@berkeley.edu">sanaka@berkeley.edu</a>
+        <a href="mailto:guangzhao.he@cornell.edu">Email</a>
+        <a href="#">CV</a>
+        <a href="#">Google Scholar</a>
+        <a href="#">X</a>
+        <a href="#">Github</a>
       </div>
     </div>
+    <img src="https://via.placeholder.com/200" alt="Guangzhao (Alex) He" />
   </header>
 
   <section>
-    <h2>👋 About Me</h2>
-    <p>I am a senior undergraduate student at <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University</a>,
-    pursuing a Bachelor of Engineering in <strong>Computer Science and Technology with Honors</strong> from
-    <a href="http://ckc.zju.edu.cn" target="_blank" rel="noopener">Chu Kochen Honors College</a>.
-    I expect to graduate in June 2026.</p>
-
-    <p>rank: <strong>2/147</strong> · GPA: <strong>93.6/100</strong></p>
-
-    <p>Currently, I am a research intern at the Berkeley AI Research (<strong>BAIR</strong>) Lab, UC Berkeley,
-    advised by <a href="https://people.eecs.berkeley.edu/~xdwang/" target="_blank" rel="noopener">Dr. Xudong Wang</a> and 
-    <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank" rel="noopener">Prof. Trevor Darrell</a>.</p>
-
-    <p>My research interests lie in <strong>Computer Vision</strong>, <strong>Generative Models</strong> and <strong>Multimodal</strong>.
-    Specifically, I'm now exploring <strong>Unified Multimodal Models</strong>, <strong>Video Generation</strong> and <strong>World Model</strong>.
-  </section>
-
-  <section class="pub-section" id="pub-list">
-    <h2>📝 Selected Publications</h2>
-    <div class="pub-list">
-      <!-- Reconstruction Alignment -->
-      <article class="card" data-year="2025" data-selected="true">
-        <div class="thumb">
-          <img src="assets/images/reca.png" alt="Reconstruction Alignment thumbnail" loading="lazy" />
-        </div>
-        <div class="meta">
-          <h3>Reconstruction Alignment Improves Unified Multimodal Models</h3>
-          <div class="authors">
-            <b>Ji Xie</b>, Trevor Darrell, Luke Zettlemoyer, XuDong Wang
-          </div>
-          <div class="venue"><b>Preprint</b> (2025)</div>
-          <div class="actions">
-            <a class="pill" href="https://www.alphaxiv.org/abs/2509.07295" target="_blank" rel="noopener">Paper</a>
-            <a class="pill" href="https://github.com/horizonwind2004/reconstruction-alignment/" target="_blank" rel="noopener">Code</a>
-            <a class="pill" href="https://huggingface.co/collections/sanaka87/reca-68ad2176380355a3dcedc068" target="_blank" rel="noopener">Model</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- ICEdit -->
-      <article class="card" data-year="2025" data-selected="true">
-        <div class="thumb">
-          <img src="assets/images/icedit.png" alt="ICEdit thumbnail" loading="lazy" />
-        </div>
-        <div class="meta">
-          <h3>In‑Context Edit: Enabling Instructional Image Editing with In‑Context Generation in Large‑Scale Diffusion Transformer</h3>
-          <div class="authors">
-            Zechuan Zhang, <b>Ji Xie</b>, Yu Lu, Zongxin Yang, Yi Yang
-          </div>
-          <div class="venue"><span class="award-highlight"><strong>NeurIPS 2025</strong></span></div>
-          <div class="actions">
-            <a class="pill" href="https://arxiv.org/abs/2501.05131" target="_blank" rel="noopener">Paper</a>
-            <a class="pill" href="https://github.com/River-Zhang/ICEdit" target="_blank" rel="noopener">Code</a>
-            <a class="pill" href="https://huggingface.co/sanaka87/ICEdit-MoE-LoRA" target="_blank" rel="noopener">Model</a>
-            <a class="pill star-pill" href="https://github.com/River-Zhang/ICEdit/stargazers" target="_blank" rel="noopener" aria-label="ICEdit stars">⭐ 2k</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3DIS -->
-      <article class="card" data-year="2025" data-selected="true">
-        <div class="thumb">
-          <img src="assets/images/3dis.png" alt="3DIS thumbnail" loading="lazy" />
-        </div>
-        <div class="meta">
-          <h3>3DIS: Depth‑Driven Decoupled Instance Synthesis for Text‑to‑Image Generation</h3>
-          <div class="authors">
-            Dewei Zhou*, <b>Ji Xie*</b>, Zongxin Yang, Yi Yang
-          </div>
-          <div class="venue"><span class="award-highlight"><strong>ICLR 2025 (Spotlight)</strong></span> </div>
-          <div class="actions">
-            <a class="pill" href="https://arxiv.org/abs/2410.12669" target="_blank" rel="noopener">Paper</a>
-            <a class="pill" href="https://github.com/limuloo/3DIS" target="_blank" rel="noopener">Code</a>
-            <a class="pill" href="https://huggingface.co/sanaka87/3DIS" target="_blank" rel="noopener">Model</a>
-          </div>
-        </div>
-      </article>
-    </div>
+    <h2>News</h2>
+    <ul class="news-list">
+      <li><span class="news-date">[2025.08]</span>I'm starting my Ph.D. studies at Cornell University.</li>
+      <li><span class="news-date">[2025.06]</span>Our work ERNet is accepted to ICCV 2025. See you in Honolulu!</li>
+      <li><span class="news-date">[2025.02]</span>Our work CANOR is accepted to CVPR 2025. See you in Nashville!</li>
+      <li><span class="news-date">[2024.06]</span>I'm visiting Stanford Vision and Learning Lab as a research intern.</li>
+      <li><span class="news-date">[2024.01]</span>Our work 4KAD is accepted to CVPR 2024.</li>
+      <li><span class="news-date">[2023.07]</span>Our work EasyVolcap is accepted to SIGGRAPH Asia 2023 TC.</li>
+    </ul>
   </section>
 
   <section>
-    <h2>🎤 Invited Talks</h2>
-    <div class="honor-list">
-      <div class="honor-item">
-        <div class="honor-main">
-          <div class="honor-title">"Reconstruction Alignment Improves Unified Multimodal Model"</div>
-          <div class="honor-subtitle">Apple Research · Invited Talk · Hosted by Chen Chen and Yinfei Yang</div>
-        </div>
-        <div class="honor-meta">10/2025</div>
+    <h2>Publication</h2>
+    <p>My research interests lie at the intersection of Vision and Graphics, particularly in the representation and understanding of dynamic 3D scenes, with the goal of enabling machines to perceive the dynamic and diverse world as humans do.</p>
+    
+    <div class="publication">
+      <h3>Category-Agnostic Neural Object Rigging</h3>
+      <div class="authors">Guangzhao He*, Chen Geng*, Shangzhe Wu, Jiajun Wu</div>
+      <div class="venue">CVPR 2025</div>
+      <div class="description">A feed-forward representation that encodes deformable 4D objects into a sparse set of spatially-grounded blobs to disentangle pose and instance information, enabling intuitive pose manipulation while preserving rich instance-specific information.</div>
+      <div class="links">
+        <a href="#">project page</a> / <a href="#">arXiv</a>
+      </div>
+    </div>
+    
+    <div class="publication">
+      <h3>ERNet: Efficient Non-Rigid Registration Network for Point Sequences</h3>
+      <div class="authors">Guangzhao He, Yuxi Xiao, Sida Peng, Zhen Xu, Xiaowei Zhou</div>
+      <div class="venue">ICCV 2025</div>
+      <div class="description">A feed-forward neural network that registers any object template onto a sequence of non-rigidly deforming point clouds, with robust performance across various object categories and challenging scenarios.</div>
+      <div class="links">
+        <a href="#">project page</a> / <a href="#">arXiv</a>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>🏆 Selected Honors</h2>
-    <div class="honor-list">
-      <div class="honor-item">
-        <div class="honor-main">
-          <div class="honor-title">SenseTime Scholarship</div>
-          <div class="honor-subtitle">Top 30 recipients annually in China</div>
-        </div>
-        <div class="honor-meta">06/2025</div>
-      </div>
-
-      <div class="honor-item">
-        <div class="honor-main">
-          <div class="honor-title">International Collegiate Programming Contest (ICPC), regional, 2022</div>
-          <div class="honor-subtitle"><span class="award-highlight">Gold Medal</span></div>
-        </div>
-        <div class="honor-meta">10/2022</div>
-      </div>
-
-      <div class="honor-item">
-        <div class="honor-main">
-          <div class="honor-title">China Collegiate Programming Contest (CCPC), regional, 2022</div>
-          <div class="honor-subtitle"><span class="award-highlight">Gold Medal</span></div>
-        </div>
-        <div class="honor-meta">10/2022</div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>🎵 Miscellaneous</h2>
-    <p>I was a member of the ZJU ACM/ICPC team and achieved a rating of
-    <strong style="color:#ff6b6b">2478</strong> on 
-    <a href="https://codeforces.com/profile/epyset" target="_blank" rel="noopener">Codeforces</a>.
-    You can find my old blog <a href="https://www.luogu.com.cn/user/77426" target="_blank" rel="noopener">here</a> — it contains my competitive-programming notes :)</p>
-    <img src="https://cfrating.baoshuo.dev/rating?username=Epyset" alt="CF rating" />
-  </section>
-
-  <footer>© <span id="y"></span> Ji Xie · Built with curiosity &amp; HTML 🍓</footer>
-</div>
-<script>
-  (function () {
-    const yearEl = document.getElementById('y');
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
-
-    const storageKey = 'ji-xie-theme';
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle ? themeToggle.querySelector('.theme-toggle-icon') : null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-    function applyTheme(theme) {
-      const isDark = theme === 'dark';
-      document.body.classList.toggle('theme-dark', isDark);
-      if (themeIcon) {
-        themeIcon.textContent = isDark ? '☀️' : '🌙';
-      }
-      if (themeToggle) {
-        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-      }
-    }
-
-    const storedTheme = localStorage.getItem(storageKey);
-    if (storedTheme === 'dark' || storedTheme === 'light') {
-      applyTheme(storedTheme);
-    } else {
-      applyTheme('light');
-    }
-
-    if (themeToggle) {
-      themeToggle.addEventListener('click', function () {
-        const newTheme = document.body.classList.contains('theme-dark') ? 'light' : 'dark';
-        applyTheme(newTheme);
-        localStorage.setItem(storageKey, newTheme);
-      });
-    }
-
-    if (prefersDark && typeof prefersDark.addEventListener === 'function') {
-      prefersDark.addEventListener('change', function (event) {
-        if (!localStorage.getItem(storageKey)) {
-          applyTheme(event.matches ? 'dark' : 'light');
-        }
-      });
-    }
-  })();
-</script>
+  <footer>
+    © 2025 Guangzhao (Alex) He
+  </footer>
+</body>
 </body>
 </html>
