@@ -38,7 +38,17 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="assets/images/icon.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/images/icon.jpg"></a>
+                <a id="avatar-link" href="assets/images/jp_icon.jpg">
+                  <img id="avatar-img" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/images/jp_icon.jpg">
+                </a>
+                <p style="text-align:center;margin-top:10px;">
+                  <button id="avatar-toggle" style="font-size:13px;padding:6px 10px;border:1px solid #bbb;border-radius:8px;background:#fff;cursor:pointer;">
+                    Switch to real photo
+                  </button>
+                </p>
+                <p id="avatar-caption" style="text-align:center;font-size:12px;color:#666;display:none;margin-top:-4px;">
+                  Taken at BAIR.
+                </p>
               </td>
             </tr>
           </tbody></table>
@@ -261,6 +271,13 @@
             </tr>
             <tr>
               <td style="padding:10px 20px 10px 20px;width:75%;vertical-align:middle">
+                <strong>Zhejiang Provincial Government Scholarship</strong>
+                <br>
+                <em>December 2023</em>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:10px 20px 10px 20px;width:75%;vertical-align:middle">
                 Zhejiang Provincial Higher Mathematics Competition, 2024, <strong style="color:#d5393d;">First Prize</strong>
                 <br>
                 <em>June 2024</em>
@@ -271,6 +288,13 @@
                 Zhejiang Provincial Collegiate Programming Contest, 2024, <strong style="color:#d5393d;">Gold Medal</strong>
                 <br>
                 <em>April 2024</em>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:10px 20px 10px 20px;width:75%;vertical-align:middle">
+                Zhejiang Provincial Collegiate Programming Contest, 2023, <strong style="color:#d5393d;">Gold Medal</strong>
+                <br>
+                <em>April 2023</em>
               </td>
             </tr>
             <tr>
@@ -325,5 +349,33 @@
         </td>
       </tr>
     </table>
+    <script>
+      (function () {
+        var isAnime = true;
+        var animeSrc = "assets/images/jp_icon.jpg";
+        var realSrc = "assets/images/icon.jpg";
+        var avatarImg = document.getElementById("avatar-img");
+        var avatarLink = document.getElementById("avatar-link");
+        var toggleBtn = document.getElementById("avatar-toggle");
+        var caption = document.getElementById("avatar-caption");
+
+        if (!avatarImg || !avatarLink || !toggleBtn || !caption) return;
+
+        toggleBtn.addEventListener("click", function () {
+          isAnime = !isAnime;
+          if (isAnime) {
+            avatarImg.src = animeSrc;
+            avatarLink.href = animeSrc;
+            caption.style.display = "none";
+            toggleBtn.textContent = "Switch to real photo";
+          } else {
+            avatarImg.src = realSrc;
+            avatarLink.href = realSrc;
+            caption.style.display = "block";
+            toggleBtn.textContent = "Switch to anime avatar";
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
