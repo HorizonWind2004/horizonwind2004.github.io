@@ -96,9 +96,16 @@ h2 {
   font-size: 22px;
 }
 
+h3 {
+  margin: 0;
+  font-weight: 700;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 26px;
+}
+
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 }
 
