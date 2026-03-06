@@ -5,7 +5,7 @@
     <title>Ji Xie</title>
     <meta name="author" content="Ji Xie">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="assets/images/icon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/jp_icon.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
   </head>
 
@@ -39,7 +39,7 @@
               </td>
               <td style="padding:4% 2.5% 2.5% 2.5%;width:37%;max-width:37%;vertical-align:top;">
                 <a id="avatar-link" href="assets/images/jp_icon.jpg" style="display:block;margin-top:8px;">
-                  <img id="avatar-img" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/images/jp_icon.jpg">
+                  <img id="avatar-img" data-mode="anime" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/images/jp_icon.jpg">
                 </a>
                 <p style="text-align:center;margin-top:10px;">
                   <button id="avatar-toggle" type="button" onclick="toggleAvatar(); return false;" style="font-size:13px;padding:6px 10px;border:1px solid #bbb;border-radius:8px;background:#fff;cursor:pointer;">
@@ -346,56 +346,31 @@
       </tr>
     </table>
     <script>
-      (function () {
-        var isAnime = true;
+      function toggleAvatar() {
         var animeSrc = "assets/images/jp_icon.jpg";
         var realSrc = "assets/images/icon.jpg";
-        var avatarImg = null;
-        var avatarLink = null;
-        var toggleBtn = null;
-        var caption = null;
+        var avatarImg = document.getElementById("avatar-img");
+        var avatarLink = document.getElementById("avatar-link");
+        var toggleBtn = document.getElementById("avatar-toggle");
+        var caption = document.getElementById("avatar-caption");
+        if (!avatarImg || !avatarLink || !toggleBtn || !caption) return false;
 
-        function applyAvatarState() {
-          if (!avatarImg || !avatarLink || !toggleBtn || !caption) return;
-          if (isAnime) {
-            avatarImg.src = animeSrc;
-            avatarLink.href = animeSrc;
-            caption.style.display = "none";
-            toggleBtn.textContent = "Switch to real photo";
-          } else {
-            avatarImg.src = realSrc;
-            avatarLink.href = realSrc;
-            caption.style.display = "block";
-            toggleBtn.textContent = "Switch to anime avatar";
-          }
-        }
-
-        window.toggleAvatar = function () {
-          isAnime = !isAnime;
-          applyAvatarState();
-        };
-
-        function initAvatarToggle() {
-          avatarImg = document.getElementById("avatar-img");
-          avatarLink = document.getElementById("avatar-link");
-          toggleBtn = document.getElementById("avatar-toggle");
-          caption = document.getElementById("avatar-caption");
-          if (!avatarImg || !avatarLink || !toggleBtn || !caption) return;
-
-          toggleBtn.onclick = function (event) {
-            if (event) event.preventDefault();
-            window.toggleAvatar();
-            return false;
-          };
-          applyAvatarState();
-        }
-
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", initAvatarToggle);
+        var isAnime = avatarImg.getAttribute("data-mode") !== "real";
+        if (isAnime) {
+          avatarImg.src = realSrc;
+          avatarImg.setAttribute("data-mode", "real");
+          avatarLink.href = realSrc;
+          caption.style.display = "block";
+          toggleBtn.textContent = "Switch to anime avatar";
         } else {
-          initAvatarToggle();
+          avatarImg.src = animeSrc;
+          avatarImg.setAttribute("data-mode", "anime");
+          avatarLink.href = animeSrc;
+          caption.style.display = "none";
+          toggleBtn.textContent = "Switch to real photo";
         }
-      })();
+        return false;
+      }
     </script>
   </body>
 </html>
