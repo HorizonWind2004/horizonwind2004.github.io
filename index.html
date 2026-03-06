@@ -38,11 +38,11 @@
                 </p>
               </td>
               <td style="padding:4% 2.5% 2.5% 2.5%;width:37%;max-width:37%;vertical-align:top;">
-                <a id="avatar-link" href="assets/images/jp_icon.jpg" style="display:block;margin-top:8px;">
+                <a id="avatar-link" href="assets/images/jp_icon.jpg" style="display:block;margin-top:28px;">
                   <img id="avatar-img" data-mode="anime" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/images/jp_icon.jpg">
                 </a>
                 <p style="text-align:center;margin-top:10px;">
-                  <button id="avatar-toggle" type="button" onclick="toggleAvatar(); return false;" style="font-size:13px;padding:6px 10px;border:1px solid #bbb;border-radius:8px;background:#fff;cursor:pointer;">
+                  <button id="avatar-toggle" type="button" style="font-size:13px;padding:6px 10px;border:1px solid #bbb;border-radius:8px;background:#fff;cursor:pointer;">
                     Switch to real photo
                   </button>
                 </p>
@@ -346,31 +346,33 @@
       </tr>
     </table>
     <script>
-      function toggleAvatar() {
+      (function() {
         var animeSrc = "assets/images/jp_icon.jpg";
         var realSrc = "assets/images/icon.jpg";
-        var avatarImg = document.getElementById("avatar-img");
-        var avatarLink = document.getElementById("avatar-link");
-        var toggleBtn = document.getElementById("avatar-toggle");
-        var caption = document.getElementById("avatar-caption");
-        if (!avatarImg || !avatarLink || !toggleBtn || !caption) return false;
-
-        var isAnime = avatarImg.getAttribute("data-mode") !== "real";
-        if (isAnime) {
-          avatarImg.src = realSrc;
-          avatarImg.setAttribute("data-mode", "real");
-          avatarLink.href = realSrc;
-          caption.style.display = "block";
-          toggleBtn.textContent = "Switch to anime avatar";
-        } else {
-          avatarImg.src = animeSrc;
-          avatarImg.setAttribute("data-mode", "anime");
-          avatarLink.href = animeSrc;
-          caption.style.display = "none";
-          toggleBtn.textContent = "Switch to real photo";
-        }
-        return false;
-      }
+        var btn = document.getElementById("avatar-toggle");
+        var img = document.getElementById("avatar-img");
+        var link = document.getElementById("avatar-link");
+        var cap = document.getElementById("avatar-caption");
+        if (!btn || !img || !link || !cap) return;
+        btn.addEventListener("click", function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var isAnime = img.getAttribute("data-mode") !== "real";
+          if (isAnime) {
+            img.src = realSrc;
+            img.setAttribute("data-mode", "real");
+            link.href = realSrc;
+            cap.style.display = "block";
+            btn.textContent = "Switch to anime avatar";
+          } else {
+            img.src = animeSrc;
+            img.setAttribute("data-mode", "anime");
+            link.href = animeSrc;
+            cap.style.display = "none";
+            btn.textContent = "Switch to real photo";
+          }
+        });
+      })();
     </script>
   </body>
 </html>
