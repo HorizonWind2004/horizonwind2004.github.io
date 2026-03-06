@@ -346,33 +346,28 @@
       </tr>
     </table>
     <script>
-      (function() {
-        var animeSrc = "assets/images/jp_icon.jpg";
-        var realSrc = "assets/images/icon.jpg";
-        var btn = document.getElementById("avatar-toggle");
+      document.addEventListener("click", function(e) {
+        var t = e.target;
+        if (!t || t.id !== "avatar-toggle") return;
+        e.preventDefault();
         var img = document.getElementById("avatar-img");
         var link = document.getElementById("avatar-link");
         var cap = document.getElementById("avatar-caption");
-        if (!btn || !img || !link || !cap) return;
-        btn.addEventListener("click", function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          var isAnime = img.getAttribute("data-mode") !== "real";
-          if (isAnime) {
-            img.src = realSrc;
-            img.setAttribute("data-mode", "real");
-            link.href = realSrc;
-            cap.style.display = "block";
-            btn.textContent = "Switch to anime avatar";
-          } else {
-            img.src = animeSrc;
-            img.setAttribute("data-mode", "anime");
-            link.href = animeSrc;
-            cap.style.display = "none";
-            btn.textContent = "Switch to real photo";
-          }
-        });
-      })();
+        if (!img || !link || !cap) return;
+        if (img.getAttribute("data-mode") !== "real") {
+          img.src = "assets/images/icon.jpg";
+          img.setAttribute("data-mode", "real");
+          link.href = "assets/images/icon.jpg";
+          cap.style.display = "block";
+          t.textContent = "Switch to anime avatar";
+        } else {
+          img.src = "assets/images/jp_icon.jpg";
+          img.setAttribute("data-mode", "anime");
+          link.href = "assets/images/jp_icon.jpg";
+          cap.style.display = "none";
+          t.textContent = "Switch to real photo";
+        }
+      });
     </script>
   </body>
 </html>
