@@ -109,6 +109,16 @@ h3 {
   font-weight: 700;
 }
 
+.self-author,
+a.self-author,
+a.self-author:focus,
+a.self-author:hover,
+a .self-author,
+a:hover .self-author {
+  color: #000000 !important;
+  font-weight: 700;
+}
+
 .name {
   padding-top: 20px;
   margin: 0;
