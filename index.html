@@ -40,16 +40,8 @@
               </td>
               <td style="padding:4% 2.5% 2.5% 2.5%;width:37%;max-width:37%;vertical-align:top;">
                 <a id="avatar-link" href="assets/images/jp_icon.jpg" style="display:block;margin-top:28px;">
-                  <img id="avatar-img" data-mode="anime" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/images/jp_icon.jpg">
+                  <img id="avatar-img" style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile avatar" src="assets/images/jp_icon.jpg">
                 </a>
-                <p style="text-align:center;margin-top:10px;">
-                  <button id="avatar-toggle" type="button" style="font-size:13px;padding:6px 10px;border:1px solid #bbb;border-radius:8px;background:#fff;cursor:pointer;">
-                    Switch to real photo
-                  </button>
-                </p>
-                <p id="avatar-caption" style="text-align:center;font-size:12px;color:#666;display:none;margin-top:-4px;">
-                  Taken at BAIR.
-                </p>
               </td>
             </tr>
           </tbody></table>
@@ -391,29 +383,5 @@
         </td>
       </tr>
     </table>
-    <script>
-      document.addEventListener("click", function(e) {
-        var t = e.target;
-        if (!t || t.id !== "avatar-toggle") return;
-        e.preventDefault();
-        var img = document.getElementById("avatar-img");
-        var link = document.getElementById("avatar-link");
-        var cap = document.getElementById("avatar-caption");
-        if (!img || !link || !cap) return;
-        if (img.getAttribute("data-mode") !== "real") {
-          img.src = "assets/images/icon.jpg";
-          img.setAttribute("data-mode", "real");
-          link.href = "assets/images/icon.jpg";
-          cap.style.display = "block";
-          t.textContent = "Switch to anime avatar";
-        } else {
-          img.src = "assets/images/jp_icon.jpg";
-          img.setAttribute("data-mode", "anime");
-          link.href = "assets/images/jp_icon.jpg";
-          cap.style.display = "none";
-          t.textContent = "Switch to real photo";
-        }
-      });
-    </script>
   </body>
 </html>

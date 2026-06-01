@@ -65,15 +65,9 @@
   - `Zhejiang Provincial Government Scholarship`：2024, 2023 合并
   - `Zhejiang Provincial Collegiate Programming Contest`：2024 & 2023 合并
 
-## 7) 头像切换功能约定
+## 7) 头像约定
 
 - 默认头像：`assets/images/jp_icon.jpg`（动漫）
-- 切换按钮：可切到真实头像 `assets/images/icon.jpg`
-- 切到真实头像显示文案：`Taken at BAIR.`
-- 按钮历史上出现过“点击无效”问题，后续改动不要破坏以下点：
-  - 按钮 `type="button"`
-  - 存在可执行的 `toggleAvatar()`（含初始化逻辑）
-  - 避免脚本加载时机导致事件未绑定
 
 ## 8) 版式与视觉约定
 
@@ -88,5 +82,3 @@
 - 提交前建议检查：
   - `git status`
   - `git diff`
-  - 页面关键交互（头像按钮）可用性
-
