@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">UC Berkeley icon</title>
+  <desc id="desc">Stylized blue and gold Berkeley badge for experience section.</desc>
+  <defs>
+    <linearGradient id="ucb-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a3b6f"/>
+      <stop offset="100%" stop-color="#003262"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="140" height="140" rx="32" fill="url(#ucb-bg)"/>
+  <circle cx="80" cy="80" r="46" fill="none" stroke="#fdb515" stroke-width="7"/>
+  <path d="M80 43l7 14 16 2-12 11 3 16-14-8-14 8 3-16-12-11 16-2z" fill="#fdb515"/>
+  <text x="80" y="108" text-anchor="middle" font-family="Lato, Verdana, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#ffffff">UCB</text>
+</svg>
