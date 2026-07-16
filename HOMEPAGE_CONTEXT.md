@@ -12,7 +12,8 @@
 
 ## 2) 个人简介（Profile）约定
 
-- 当前身份写法：2026 年 8 月开始 CMU LTI PhD；现在是 Bytedance Seed intern；Berkeley BAIR visiting 已于 2025 年 12 月结束。
+- 当前身份写法：2026 年 8 月开始 CMU LTI PhD；Bytedance Seed intern 于 2026 年 8 月结束；Berkeley BAIR visiting 已于 2025 年 12 月结束。
+- 顶部简介中的 advisor 只保留学术界教授；Bytedance mentor Xun Wang 放在 Experience 的 Seed 条目中。
 - 不写“我是浙大的”身份叙述（学校归属身份不放在简介里）。
 - `Rank/GPA` 不放主页正文（放在 CV）。
 - 顶部链接包含：`Email / Google Scholar / CV / GitHub / Twitter`。
@@ -85,8 +86,10 @@
 
 ## 10) Seedream 5.0 Pro
 
-- `Favorite Works` 首项展示 Seedream 5.0 Pro。
+- Seedream 5.0 Pro 单独放在 `Industry Experience`，不放入 `Favorite Works`。
 - 身份写法：`Core Contributor · Interactive Editing`。
 - 使用官方发布博客中的图层拆分演示，压缩为轻量 MP4，并保留官方博客与项目页链接。
-- 视频在桌面端约占卡片三分之一，并显式限制媒体宽度，避免固有尺寸撑开主页；移动端最大宽度为 260px。
+- 视频与论文缩略图同宽，最大宽度为 160px，并显式限制媒体宽度，避免固有尺寸撑开主页。
 - CMU 经历使用官方红色单色校徽，不使用红底文字版 wordmark。
+- `Core Contributor · Interactive Editing` 使用普通加粗文字，不使用胶囊边框；视频下方不加脚注。
+- Seed Experience 使用 ByteDance 四竖条图形 icon，并与 CMU、Berkeley 校徽统一为 72×72 视觉尺寸。
