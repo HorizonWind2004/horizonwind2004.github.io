@@ -12,7 +12,7 @@
 
 ## 2) 个人简介（Profile）约定
 
-- 当前身份写法：现在是 Bytedance Seed intern，之前是 Berkeley BAIR visiting。
+- 当前身份写法：2026 年 8 月开始 CMU LTI PhD；现在是 Bytedance Seed intern；Berkeley BAIR visiting 已于 2025 年 12 月结束。
 - 不写“我是浙大的”身份叙述（学校归属身份不放在简介里）。
 - `Rank/GPA` 不放主页正文（放在 CV）。
 - 顶部链接包含：`Email / Google Scholar / CV / GitHub / Twitter`。
@@ -82,3 +82,9 @@
 - 提交前建议检查：
   - `git status`
   - `git diff`
+
+## 10) Seedream 5.0 Pro
+
+- `Favorite Works` 首项展示 Seedream 5.0 Pro。
+- 身份写法：`Core Contributor · Interactive Editing`。
+- 使用官方发布博客中的图层拆分演示，压缩为轻量 MP4，并保留官方博客与项目页链接。

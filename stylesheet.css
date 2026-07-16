@@ -150,3 +150,53 @@ a:hover .self-author {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.seedream-highlight {
+  background: linear-gradient(135deg, #fff9df 0%, #fffef7 58%, #f5f5f5 100%);
+}
+
+.seedream-highlight video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #0b0b0b;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.demo-caption {
+  margin-top: 7px;
+  color: #666;
+  font-size: 11px;
+  text-align: center;
+}
+
+.role-badge {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 4px 8px;
+  color: #a51c30;
+  background: rgba(165, 28, 48, 0.08);
+  border: 1px solid rgba(165, 28, 48, 0.22);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .seedream-media,
+  .seedream-copy {
+    display: block;
+    box-sizing: border-box;
+    width: 100% !important;
+  }
+
+  .seedream-media {
+    padding-bottom: 4px !important;
+  }
+
+  .seedream-copy {
+    padding-top: 12px !important;
+  }
+}
