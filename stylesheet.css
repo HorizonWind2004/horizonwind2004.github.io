@@ -155,11 +155,19 @@ span.highlight {
   background: linear-gradient(135deg, #fff9df 0%, #fffef7 58%, #f5f5f5 100%);
 }
 
+.seedream-media,
+.seedream-copy {
+  min-width: 0;
+  overflow: hidden;
+}
+
 .seedream-highlight video {
   display: block;
   width: 100%;
+  max-width: 240px;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  margin: 0 auto;
   background: #0b0b0b;
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
@@ -184,6 +192,22 @@ span.highlight {
   font-weight: 700;
 }
 
+.cmu-seal-frame {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.cmu-seal-frame img {
+  position: absolute;
+  width: 151px;
+  max-width: none;
+  left: -39px;
+  top: -15px;
+  border: 0;
+}
+
 @media (max-width: 640px) {
   .seedream-media,
   .seedream-copy {
@@ -194,6 +218,10 @@ span.highlight {
 
   .seedream-media {
     padding-bottom: 4px !important;
+  }
+
+  .seedream-highlight video {
+    max-width: 260px;
   }
 
   .seedream-copy {

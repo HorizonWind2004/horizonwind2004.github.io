@@ -88,3 +88,5 @@
 - `Favorite Works` 首项展示 Seedream 5.0 Pro。
 - 身份写法：`Core Contributor · Interactive Editing`。
 - 使用官方发布博客中的图层拆分演示，压缩为轻量 MP4，并保留官方博客与项目页链接。
+- 视频在桌面端约占卡片三分之一，并显式限制媒体宽度，避免固有尺寸撑开主页；移动端最大宽度为 260px。
+- CMU 经历使用官方红色单色校徽，不使用红底文字版 wordmark。
