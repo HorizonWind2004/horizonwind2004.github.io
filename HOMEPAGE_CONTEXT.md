@@ -86,10 +86,10 @@
 
 ## 10) Seedream 5.0 Pro
 
-- Seedream 5.0 Pro 单独放在 `Industry Experience`，不放入 `Favorite Works`。
-- 不标注 `Core Contributor` 或 `Contributor`，避免与未来技术报告的正式贡献口径冲突。
+- Seedream 5.0 Pro 单独放在 `Internship Experience`，不放入 `Favorite Works`。
+- 身份写作 `Core Contributor of Interactive Editing`，明确贡献范围仅为交互式编辑。
 - 使用官方发布博客中的图层拆分演示，压缩为轻量 MP4，并保留官方博客与项目页链接。
 - 视频与论文缩略图同宽，最大宽度为 160px，并显式限制媒体宽度，避免固有尺寸撑开主页。
 - CMU 经历使用官方红色单色校徽，不使用红底文字版 wordmark。
-- 视频下方不加脚注，也不额外添加贡献身份标签。
+- 视频下方不加脚注；贡献身份使用普通加粗文字，不加胶囊边框。
 - Seed Experience 使用 ByteDance 四竖条图形 icon，并与 CMU、Berkeley 校徽统一为 72×72 视觉尺寸。
