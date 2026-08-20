@@ -12,7 +12,7 @@
 
 ## 2) 个人简介（Profile）约定
 
-- 当前身份写法：2026 年 8 月开始 CMU LTI PhD；Bytedance Seed intern 于 2026 年 8 月结束；Berkeley BAIR visiting 已于 2025 年 12 月结束。
+- 当前身份写法：CMU LTI first-year PhD student（2026 年 8 月至今），导师为 Louis-Philippe Morency；Bytedance Seed intern 于 2026 年 8 月结束；Berkeley BAIR visiting 已于 2025 年 12 月结束。
 - 顶部简介中的 advisor 只保留学术界教授；Bytedance mentor 放在 Experience 的 Seed 条目中，写作 `Mentor: Xun Wang`。
 - 不写“我是浙大的”身份叙述（学校归属身份不放在简介里）。
 - `Rank/GPA` 不放主页正文（放在 CV）。
