@@ -62,8 +62,8 @@
 
 - 按年份倒序展示。
 - 同一奖项跨年份时合并成一条，避免冗余（如 2024, 2023 放一行）。
+- 不展示 `Zhejiang Provincial Government Scholarship`。
 - 当前明确：
-  - `Zhejiang Provincial Government Scholarship`：2024, 2023 合并
   - `Zhejiang Provincial Collegiate Programming Contest`：2024 & 2023 合并
 
 ## 7) 头像约定
