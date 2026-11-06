@@ -1,0 +1,32 @@
+/* Original project teaser geometry, stacked without changing either task's aspect ratio. */
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 360px; height: 420px; overflow: hidden; background: #fff; }
+.tldr-teaser { width: 360px; height: 420px; padding: 4px 8px; display: grid; grid-template-rows: 177px 58px 177px; color: #263b4d; }
+.teaser-panel { position: relative; padding: 4px 0 12px; background: #fff; }
+.teaser-i2i { --arrow-color: #c58f97; }
+.teaser-i2t { --arrow-color: #86a9c7; }
+.teaser-title { margin: 0 0 10px; font: 600 20px/1.2 Georgia, serif; text-align: center; }
+.teaser-glow { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
+.teaser-flow { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.jigsaw-grid { position: relative; flex: none; display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 3px; width: 128px; height: 128px; }
+.jigsaw-tile { position: relative; display: block; min-width: 0; border-radius: 3px; background-position: center; background-size: cover; }
+.jigsaw-slot { border: 1.5px dashed #c9d6e1; border-radius: 3px; background: #fff; opacity: 0; }
+.jigsaw-ring { position: absolute; inset: -2px; border-radius: inherit; box-shadow: 0 0 0 2px #4c89c0; opacity: 0; }
+.jigsaw-badge { position: absolute; top: 5px; left: 5px; min-width: 18px; height: 18px; padding: 0 3px; border-radius: 3px; color: #fff; background: rgba(22,34,46,.74); font: 600 11px/18px Arial, sans-serif; text-align: center; }
+.jigsaw-flyer { z-index: 2; opacity: 0; }
+.jigsaw-result { position: absolute; inset: 0; z-index: 3; overflow: hidden; border-radius: 3px; background: url('jigsaw-output.webp') center/cover; }
+.jigsaw-shine { position: absolute; inset: 0 -35%; background: linear-gradient(100deg,transparent 38%,rgba(255,255,255,.5) 50%,transparent 62%); opacity: 0; }
+.teaser-arrow { position: relative; flex: none; width: 34px; height: 12px; }
+.teaser-arrow i { position: absolute; left: 0; right: 1px; top: 50%; height: 1.5px; background: var(--arrow-color); transform-origin: left center; }
+.teaser-arrow b { position: absolute; right: 1px; top: 50%; width: 8px; height: 8px; margin-top: -3.25px; border-top: 1.5px solid var(--arrow-color); border-right: 1.5px solid var(--arrow-color); transform: rotate(45deg); }
+.teaser-answer { position: relative; flex: none; width: 128px; padding: 10px; border: 1.5px solid #c9d8e5; border-radius: 4px; background: #fff; font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.teaser-answer code { display: block; width: 13.4ch; font: inherit; }
+.answer-caret { position: absolute; left: 0; top: 0; width: 1.5px; background: #3b7bb8; opacity: 0; }
+.ability-transfer { display: grid; grid-template-columns: 92px 130px 112px; justify-content: center; align-items: center; gap: 4px; padding-bottom: 8px; text-align: center; font: 600 16px/1.15 Georgia, serif; }
+.ability-generation { color: #ba747e; }
+.ability-understanding { color: #6492b7; }
+.ability-arrow { display: flex; flex-direction: column; gap: 9px; color: #687f93; font-size: 15px; }
+.ability-arrow > i { position: relative; display: block; width: 100%; height: 1px; background: #8b9eae; }
+.ability-arrow > i:after { content: ''; position: absolute; right: 1px; top: -4px; width: 9px; height: 9px; border-top: 1px solid #7f9fbd; border-right: 1px solid #7f9fbd; transform: rotate(45deg); }
+.ability-flow { position: absolute; inset: -.5px 0 auto; height: 2px; background: linear-gradient(90deg,#c98690,#6f9bc2); transform-origin: left center; }
+.ability-comet { position: absolute; left: 0; top: 50%; width: 9px; height: 9px; margin: -4.5px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 2px rgba(142,146,196,.55); opacity: 0; }
