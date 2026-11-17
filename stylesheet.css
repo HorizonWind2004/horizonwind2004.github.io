@@ -212,7 +212,8 @@ span.highlight {
   margin: 0;
 }
 
-.seedream-highlight video {
+.seedream-highlight video,
+.seedream-cover {
   display: block;
   width: 100%;
   max-width: 160px;
