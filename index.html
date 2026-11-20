@@ -254,16 +254,31 @@
             </tr>
 
             <!-- I2VT -->
-            <tr class="publication-row">
-              <td aria-hidden="true"></td>
-              <td style="padding:20px;vertical-align:middle">
+            <tr class="publication-row" id="i2vt">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  width="160"
+                  height="47"
+                  style="display:block;max-width:100%;height:auto"
+                  poster="assets/images/i2vt-poster.jpg"
+                  aria-label="Source video and I2VT result showing the person jumping">
+                  <source src="assets/videos/i2vt-preview.mp4" type="video/mp4">
+                  Your browser does not support embedded videos.
+                </video>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle unlinked-paper-title">Improving and Expanding Video Editing Capabilities Without Videos</span>
                 <br>
                 <span class="self-author">Ji Xie</span>, Yanhao Jia, Xiangpeng Yang, Martin Q. Ma, Sihan Xu, Erik Cambria, Louis-Philippe Morency
                 <br>
                 <strong style="color:#d5393d;">In submission</strong>
                 <p>
-                  Image-to-Video Transfer (I2VT) uses an image editor to improve pretrained video editors and extend them to new editing tasks.
+                  Image-to-Video Transfer (I2VT) lets video models learn to edit images to improve and expand their video editing capabilities.
                 </p>
               </td>
             </tr>
