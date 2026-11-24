@@ -110,6 +110,35 @@ h3 {
   line-height: 1.4;
 }
 
+.i2vt-demo {
+  width: 160px;
+  max-width: 100%;
+  margin: 0;
+  color: #555;
+}
+
+.i2vt-demo-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.i2vt-demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 392 / 180;
+}
+
+.i2vt-demo figcaption {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 .omni-publication > td {
   max-width: 0;
 }

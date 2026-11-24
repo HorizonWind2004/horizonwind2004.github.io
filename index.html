@@ -6,7 +6,7 @@
     <meta name="author" content="Ji Xie">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="assets/images/jp_icon.jpg" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20261117a">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=i2vt-wave">
   </head>
 
   <body>
@@ -256,20 +256,27 @@
             <!-- I2VT -->
             <tr class="publication-row" id="i2vt">
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <video
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  preload="metadata"
-                  width="160"
-                  height="47"
-                  style="display:block;max-width:100%;height:auto"
-                  poster="assets/images/i2vt-poster.jpg"
-                  aria-label="Source video and I2VT result showing the person jumping">
-                  <source src="assets/videos/i2vt-preview.mp4" type="video/mp4">
-                  Your browser does not support embedded videos.
-                </video>
+                <figure class="i2vt-demo">
+                  <div class="i2vt-demo-labels" aria-hidden="true">
+                    <span>Source</span>
+                    <span>I2VT</span>
+                  </div>
+                  <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    width="160"
+                    height="73"
+                    poster="assets/images/i2vt-poster.jpg?v=wave"
+                    aria-label="Source video on the left and the I2VT result on the right"
+                    aria-describedby="i2vt-prompt">
+                    <source src="assets/videos/i2vt-preview.mp4?v=wave" type="video/mp4">
+                    Your browser does not support embedded videos.
+                  </video>
+                  <figcaption id="i2vt-prompt">Prompt: &ldquo;Make the person wave with the hand on the left side of the frame.&rdquo;</figcaption>
+                </figure>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
                 <span class="papertitle unlinked-paper-title">Improving and Expanding Video Editing Capabilities Without Videos</span>
