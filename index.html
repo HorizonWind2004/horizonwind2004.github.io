@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="assets/images/jp_icon.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css?v=i2vt-jump">
+    <style>
+      #publication-list [hidden] { display: none !important; }
+      #publication-toggle:not([hidden]) {
+        background: #fff; border: 1px solid #c9d2dc; border-radius: 6px;
+        color: #175895; cursor: pointer; font: inherit; padding: 5px 10px;
+      }
+      #publication-toggle:hover { background: #f2f6fc; }
+      #publication-toggle:focus-visible { outline: 2px solid #175895; outline-offset: 2px; }
+    </style>
   </head>
 
   <body>
@@ -122,16 +131,51 @@
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Publications</h2>
-                <p class="publication-note">The projects below are ones I contributed to substantially. See my <a href="https://scholar.google.com/citations?user=lqIwilAAAAAJ&amp;hl=en">Google Scholar</a> for the full publication list.</p>
+                <p class="publication-note">Selected work is shown by default. See <a href="https://scholar.google.com/citations?user=lqIwilAAAAAJ&amp;hl=en">Google Scholar</a> for my complete bibliography.</p>
+                <button type="button" id="publication-toggle" aria-controls="publication-list" aria-expanded="false" hidden>Show all publications</button>
               </td>
             </tr>
           </tbody></table>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table id="publication-list" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
             <tr class="publication-section-row">
               <td colspan="2" style="padding:8px 20px 4px 20px;">
                 <h3 style="margin:0;color:#d5393d;">Foundation Models</h3>
+              </td>
+            </tr>
+
+            <!-- NEPA-DiT -->
+            <tr class="publication-row">
+              <td style="width:25%;"></td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2610.02203">
+                  <span class="papertitle">Embedding Prediction Helps Image Generation</span>
+                </a>
+                <br>
+                Sihan Xu, <span class="self-author">Ji Xie</span>, Zilin Wang, Hui Shen, Stella X. Yu
+                <br>
+                <em>arXiv</em>
+                <br>
+                <a href="https://arxiv.org/abs/2610.02203">paper</a>
+                <p>NEPA-DiT conditions image generation on predicted visual embeddings that adapt at every denoising step.</p>
+              </td>
+            </tr>
+
+            <!-- JetDiffusion -->
+            <tr class="publication-row">
+              <td style="width:25%;"></td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2611.33268">
+                  <span class="papertitle">JetDiffusion: Pushing the Speed Limits of Video Generation with NVFP4 Sparse Attention</span>
+                </a>
+                <br>
+                Yulun Wu, Zihan Min, Minshen Zhang, Kaiqin Kong, <span class="self-author">Ji Xie</span>, Will Lin, Junda Chen, Wenxuan Tan, Aryan Kumar, Loay Rashid, Qingyu Yin, Hao Zhang
+                <br>
+                <em>arXiv</em>
+                <br>
+                <a href="https://arxiv.org/abs/2611.33268">paper</a>
+                <p>JetDiffusion combines trainable sparse attention, NVFP4 quantization, and step distillation to accelerate video generation.</p>
               </td>
             </tr>
 
@@ -334,7 +378,7 @@
             </tr>
 
 <!-- VideoCoF -->
-            <tr class="publication-row">
+            <tr class="publication-row" data-nonselected>
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <video width="160" autoplay loop muted playsinline style="border-style:none">
                   <source src="https://videocof.github.io/assets/motivation.mp4" type="video/mp4">
@@ -368,7 +412,7 @@
             </tr>
 
             <!-- ICEdit -->
-            <tr class="publication-row favorite-work" bgcolor="#ffffd0">
+            <tr class="publication-row" data-nonselected>
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <img src="assets/images/icedit-demo.gif" alt="icedit" width="160" style="border-style: none">
               </td>
@@ -397,7 +441,7 @@
             </tr>
 
             <!-- 3DIS -->
-            <tr class="publication-row">
+            <tr class="publication-row" data-nonselected>
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <img src="assets/images/3dis.png" alt="3dis" width="160" style="border-style: none">
               </td>
@@ -581,5 +625,21 @@
         </td>
       </tr>
     </tbody></table>
+    <script>
+      (() => {
+        const toggle = document.getElementById('publication-toggle');
+        const nonselected = document.querySelectorAll('#publication-list [data-nonselected]');
+        function showAll(expanded) {
+          nonselected.forEach(row => { row.hidden = !expanded; });
+          toggle.setAttribute('aria-expanded', String(expanded));
+          toggle.textContent = expanded ? 'Show selected publications' : 'Show all publications';
+        }
+        showAll(false);
+        toggle.hidden = false;
+        toggle.addEventListener('click', () => {
+          showAll(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+      })();
+    </script>
   </body>
 </html>
